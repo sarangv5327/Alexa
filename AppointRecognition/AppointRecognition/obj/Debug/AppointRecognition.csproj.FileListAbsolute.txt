@@ -1,0 +1,8 @@
+c:\users\sarang.vadali\documents\visual studio 2013\Projects\AppointRecognition\AppointRecognition\bin\Debug\AppointRecognition.exe.config
+c:\users\sarang.vadali\documents\visual studio 2013\Projects\AppointRecognition\AppointRecognition\bin\Debug\AppointRecognition.exe
+c:\users\sarang.vadali\documents\visual studio 2013\Projects\AppointRecognition\AppointRecognition\bin\Debug\AppointRecognition.pdb
+c:\users\sarang.vadali\documents\visual studio 2013\Projects\AppointRecognition\AppointRecognition\obj\Debug\AppointRecognition.csprojResolveAssemblyReference.cache
+c:\users\sarang.vadali\documents\visual studio 2013\Projects\AppointRecognition\AppointRecognition\obj\Debug\AppointRecognition.exe
+c:\users\sarang.vadali\documents\visual studio 2013\Projects\AppointRecognition\AppointRecognition\obj\Debug\AppointRecognition.pdb
+c:\users\sarang.vadali\documents\visual studio 2013\Projects\AppointRecognition\AppointRecognition\bin\Debug\AppointRecognition.Domain.dll
+c:\users\sarang.vadali\documents\visual studio 2013\Projects\AppointRecognition\AppointRecognition\bin\Debug\AppointRecognition.Domain.pdb
