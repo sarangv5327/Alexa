@@ -10,19 +10,19 @@ namespace AppointRecognition.Domain
     {
         public void service(String[] appointimes, String[] locations, String service, String[] datetimes)
         {
-            Console.WriteLine("Ok. What is the date you want your " + service + "? ");
+            Console.WriteLine("Ok. What is the date you want your " + service + "?");
             String date = (Console.ReadLine());
             for (int z = datetimes.Length - 1; z >= 0; z--)
             {
                 if (date.Contains(datetimes[z]))
                 {
-                    Console.WriteLine("Ok. What time would you want your " + service + "? ");
+                    Console.WriteLine("Ok. What time would you want your " + service + "?");
                     String time = (Console.ReadLine());
                     for (int i = 0; i < appointimes.Length; i++)
                     {
                         if (time.Contains(appointimes[i]))
                         {
-                            Console.WriteLine("Ok. Where do you want to hold your " + service + "? ");
+                            Console.WriteLine("Ok. Where do you want to hold your " + service + "?");
                             String place = (Console.ReadLine().ToLower());
                             for (int j = 0; j < locations.Length; j++)
                             {
@@ -52,13 +52,13 @@ namespace AppointRecognition.Domain
 
         public void servicewdate(String[] appointimes, String[] locations, String service, String date)
         {
-            Console.WriteLine("Ok. What time would you want your " + service + "? ");
+            Console.WriteLine("Ok. What time would you want your " + service + "?");
             String time = (Console.ReadLine());
             for (int i = 0; i < appointimes.Length; i++)
             {
                 if (time.Contains(appointimes[i]))
                 {
-                    Console.WriteLine("Ok. Where do you want to hold your " + service + "? ");
+                    Console.WriteLine("Ok. Where do you want to hold your " + service + "?");
                     String place = (Console.ReadLine().ToLower());
                     for (int j = 0; j < locations.Length; j++)
                     {
@@ -83,13 +83,13 @@ namespace AppointRecognition.Domain
 
         public void servicewtime(String time, String[] locations, String service, String[] datetimes)
         {
-            Console.WriteLine("Ok. What is the date you want your " + service + "? ");
+            Console.WriteLine("Ok. What is the date you want your " + service + "?");
             String date = (Console.ReadLine());
             for (int z = datetimes.Length - 1; z >= 0; z--)
             {
                 if (date.Contains(datetimes[z]))
                 {
-                    Console.WriteLine("Ok. Where do you want to hold your " + service + "? ");
+                    Console.WriteLine("Ok. Where do you want to hold your " + service + "?");
                     String place = (Console.ReadLine().ToLower());
                     for (int j = 0; j < locations.Length; j++)
                     {
@@ -114,7 +114,7 @@ namespace AppointRecognition.Domain
 
         public void servicewtimewdate(String time, String[] locations, String service, String date)
         {
-            Console.WriteLine("Ok. Where do you want to hold your " + service + "? ");
+            Console.WriteLine("Ok. Where do you want to hold your " + service + "?");
             String place = (Console.ReadLine().ToLower());
             for (int j = 0; j < locations.Length; j++)
             {
@@ -134,13 +134,13 @@ namespace AppointRecognition.Domain
 
         public void servicewcity(String[] appointimes, String place, String service, String[] datetimes)
         {
-            Console.WriteLine("Ok. What is the date you want your " + service + "? ");
+            Console.WriteLine("Ok. What is the date you want your " + service + "?");
             String date = (Console.ReadLine());
             for (int z = datetimes.Length - 1; z >= 0; z--)
             {
                 if (date.Contains(datetimes[z]))
                 {
-                    Console.WriteLine("Ok. What time would you want your " + service + "? ");
+                    Console.WriteLine("Ok. What time would you want your " + service + "?");
                     String time = (Console.ReadLine());
                     for (int i = 0; i < appointimes.Length; i++)
                     {
@@ -165,7 +165,7 @@ namespace AppointRecognition.Domain
 
         public void servicewcitywdate(String[] appointimes, String place, String service, String date)
         {
-            Console.WriteLine("Ok. What time would you want your " + service + "? ");
+            Console.WriteLine("Ok. What time would you want your " + service + "?");
             String time = (Console.ReadLine());
             for (int i = 0; i < appointimes.Length; i++)
             {
@@ -185,7 +185,7 @@ namespace AppointRecognition.Domain
 
         public void servicewcitywtime(String time, String place, String service, String[] datetimes)
         {
-            Console.WriteLine("Ok. What is the date you want your " + service + "? ");
+            Console.WriteLine("Ok. What is the date you want your " + service + "?");
             String date = (Console.ReadLine());
             for (int z = datetimes.Length - 1; z >= 0; z--)
             {
@@ -9862,9 +9862,211 @@ namespace AppointRecognition.Domain
                     return;
                 }
             }
-            Console.WriteLine("Sorry, that date is not available.");
+            Console.WriteLine("Sorry, that time is not available.");
             Console.ReadLine();
             return;
+        }
+
+
+
+        public void apptnailwcitywdate(String[] appointimes, String place, String date)
+        {
+                    Console.WriteLine("Ok. What time would you want your nail care appointment? ");
+                    String time = (Console.ReadLine());
+                    for (int i = 0; i < appointimes.Length; i++)
+                    {
+                        if (time.Contains(appointimes[i]))
+                        {
+                            Console.WriteLine("Ok. Would you like a Manicure, Pedicure, Manicure and Pedicure, Polish Change, Full Set Acrylic, Acrylic Fill, Pink and White Full Set, Nail Replacement, Gel Nails Full Set, Silk Nails Full Set, French Fill, French Full Set?");
+                            String nail = (Console.ReadLine().ToLower());
+                            if (nail.Contains("mani") && nail.Contains("pedi"))
+                            {
+                                Console.WriteLine("Ok. Would you like a French or Spa Manicure and Pedicure?");
+                                String manipedi = (Console.ReadLine().ToLower());
+                                if (manipedi.Contains("french"))
+                                {
+                                    Console.WriteLine("Thank you. You have a French Manicure and Pedicure in " + place + " at " + appointimes[i] + " on " + date + ". See you then!");
+                                    Console.ReadLine();
+                                }
+                                if (manipedi.Contains("spa"))
+                                {
+                                    Console.WriteLine("Thank you. You have a Spa Manicure and Pedicure in " + place + " at " + appointimes[i] + " on " + date + ". See you then!");
+                                    Console.ReadLine();
+                                }
+                            }
+                            if (nail.Contains("mani") && !(nail.Contains("pedi")))
+                            {
+                                Console.WriteLine("Ok. Would you like a French or Spa Manicure?");
+                                String mani = (Console.ReadLine().ToLower());
+                                if (mani.Contains("french"))
+                                {
+                                    Console.WriteLine("Thank you. You have a French Manicure in " + place + " at " + time + " on " + date + ". See you then!");
+                                    Console.ReadLine();
+                                }
+                                if (mani.Contains("spa"))
+                                {
+                                    Console.WriteLine("Thank you. You have a Spa Manicure in " + place + " at " + time + " on " + date + ". See you then!");
+                                    Console.ReadLine();
+                                }
+                            }
+                            if (nail.Contains("pedi") && !(nail.Contains("mani")))
+                            {
+                                Console.WriteLine("Ok. Would you like a French or Spa Pedicure?");
+                                String pedi = (Console.ReadLine().ToLower());
+                                if (pedi.Contains("french"))
+                                {
+                                    Console.WriteLine("Thank you. You have a French Pedicure in " + place + " at " + time + " on " + date + ". See you then!");
+                                    Console.ReadLine();
+                                }
+                                if (pedi.Contains("spa"))
+                                {
+                                    Console.WriteLine("Thank you. You have a Spa Pedicure in " + place + " at " + time + " on " + date + ". See you then!");
+                                    Console.ReadLine();
+                                }
+                            }
+                            if (nail.Contains("polish"))
+                            {
+                                Console.WriteLine("Ok. Would you like the Polish Change on Hands, Feet, or Hands and Feet?");
+                                String polish = (Console.ReadLine().ToLower());
+                                if (polish.Contains("hands") && polish.Contains("feet"))
+                                {
+                                    Console.WriteLine("Thank you. You have a Polish Change on Hands and Feet in " + place + " at " + time + " on " + date + ". See you then!");
+                                    Console.ReadLine();
+                                }
+                                if (polish.Contains("hands") && !(polish.Contains("feet")))
+                                {
+                                    Console.WriteLine("Thank you. You have a Polish Change on Hands in " + place + " at " + time + " on " + date + ". See you then!");
+                                    Console.ReadLine();
+                                }
+                                if (polish.Contains("feet") && !(polish.Contains("feet")))
+                                {
+                                    Console.WriteLine("Thank you. You have a Polish Change on Feet in " + place + " at " + time + " on " + date + ". See you then!");
+                                    Console.ReadLine();
+                                }
+                            }
+                            if (nail.Contains("full") && (nail.Contains("acrylic")))
+                            {
+                                Console.WriteLine("Ok. Would you like the Full Set Acrylic on Hands, Feet, or Hands and Feet?");
+                                String acrylicfull = (Console.ReadLine().ToLower());
+                                if (acrylicfull.Contains("hands") && acrylicfull.Contains("feet"))
+                                {
+                                    Console.WriteLine("Thank you. You have a Full Set Acrylic on Hands and Feet in " + place + " at " + time + " on " + date + ". See you then!");
+                                    Console.ReadLine();
+                                }
+                                if (acrylicfull.Contains("hands") && !(acrylicfull.Contains("feet")))
+                                {
+                                    Console.WriteLine("Thank you. You have a Full Set Acrylic on Hands in " + place + " at " + time + " on " + date + ". See you then!");
+                                    Console.ReadLine();
+                                }
+                                if (acrylicfull.Contains("feet") && !(acrylicfull.Contains("hands")))
+                                {
+                                    Console.WriteLine("Thank you. You have a Full Set Acrylic on Feet in " + place + " at " + time + " on " + date + ". See you then!");
+                                    Console.ReadLine();
+                                }
+                            }
+                            if (nail.Contains("acrylic") && (nail.Contains("fill")))
+                            {
+                                Console.WriteLine("Ok. Would you like the Acrylic Fill on Hands, Feet, or Hands and Feet?");
+                                String acrylicfill = (Console.ReadLine().ToLower());
+                                if (acrylicfill.Contains("hands") && acrylicfill.Contains("feet"))
+                                {
+                                    Console.WriteLine("Thank you. You have a Acrylic Fill on Hands and Feet in " + place + " at " + time + " on " + date + ". See you then!");
+                                    Console.ReadLine();
+                                }
+                                if (acrylicfill.Contains("hands") && !(acrylicfill.Contains("feet")))
+                                {
+                                    Console.WriteLine("Thank you. You have a Acrylic Fill on Hands in " + place + " at " + time + " on " + date + ". See you then!");
+                                    Console.ReadLine();
+                                }
+                                if (acrylicfill.Contains("feet") & !(acrylicfill.Contains("hands")))
+                                {
+                                    Console.WriteLine("Thank you. You have a Acrylic Fill on Feet in " + place + " at " + time + " on " + date + ". See you then!");
+                                    Console.ReadLine();
+                                }
+                            }
+                            if (nail.Contains("pink") || nail.Contains("white"))
+                            {
+                                Console.WriteLine("Ok. Would you like the Pink and White Full Set on Hands, Feet, or Hands and Feet?");
+                                String pinkwhite = (Console.ReadLine().ToLower());
+                                if (pinkwhite.Contains("hands") && pinkwhite.Contains("feet"))
+                                {
+                                    Console.WriteLine("Thank you. You have a Pink and White Full Set on Hands and Feet in " + place + " at " + time + " on " + date + ". See you then!");
+                                    Console.ReadLine();
+                                }
+                                if (pinkwhite.Contains("hands") && !(pinkwhite.Contains("feet")))
+                                {
+                                    Console.WriteLine("Thank you. You have a Pink and White Full Set on Hands in " + place + " at " + time + " on " + date + ". See you then!");
+                                    Console.ReadLine();
+                                }
+                                if (pinkwhite.Contains("feet") && !(pinkwhite.Contains("hands")))
+                                {
+                                    Console.WriteLine("Thank you. You have a Pink and White Full Set on Feet in " + place + " at " + time + " on " + date + ". See you then!");
+                                    Console.ReadLine();
+                                }
+                            }
+                            if (nail.Contains("replace"))
+                            {
+                                Console.WriteLine("Thank you. You have a Nail Replacement in " + place + " at " + time + " on " + date + ". See you then!");
+                                Console.ReadLine();
+                            }
+                            if (nail.Contains("gel"))
+                            {
+                                Console.WriteLine("Ok. Would you like the Gel Nails Full Set on Hands, Feet, or Hands and Feet?");
+                                String gel = (Console.ReadLine().ToLower());
+                                if (gel.Contains("hands") && gel.Contains("feet"))
+                                {
+                                    Console.WriteLine("Thank you. You have a Gel Nails Full Set on Hands and Feet in " + place + " at " + time + " on " + date + ". See you then!");
+                                    Console.ReadLine();
+                                }
+                                if (gel.Contains("hands") && !(gel.Contains("feet")))
+                                {
+                                    Console.WriteLine("Thank you. You have a Gel Nails Full Set on Hands in " + place + " at " + time + " on " + date + ". See you then!");
+                                    Console.ReadLine();
+                                }
+                                if (gel.Contains("feet") && !(gel.Contains("hands")))
+                                {
+                                    Console.WriteLine("Thank you. You have a Gel Nails Full Set on Feet in " + place + " at " + time + " on " + date + ". See you then!");
+                                    Console.ReadLine();
+                                }
+
+                            }
+                            if (nail.Contains("silk"))
+                            {
+                                Console.WriteLine("Ok. Would you like the Silk Nails Full Set on Hands, Feet, or Hands and Feet?");
+                                String silk = (Console.ReadLine().ToLower());
+                                if (silk.Contains("hands") && silk.Contains("feet"))
+                                {
+                                    Console.WriteLine("Thank you. You have a Silk Nails Full Set on Hands and Feet in " + place + " at " + time + " on " + date + ". See you then!");
+                                    Console.ReadLine();
+                                }
+                                if (silk.Contains("hands") && !(silk.Contains("feet")))
+                                {
+                                    Console.WriteLine("Thank you. You have a Silk Nails Full Set on Hands in " + place + " at " + time + " on " + date + ". See you then!");
+                                    Console.ReadLine();
+                                }
+                                if (silk.Contains("feet") && !(silk.Contains("hands")))
+                                {
+                                    Console.WriteLine("Thank you. You have a Silk Nails Full Set on Feet in " + place + " at " + time + " on " + date + ". See you then!");
+                                    Console.ReadLine();
+                                }
+
+                            }
+                            if (nail.Contains("french") && nail.Contains("full"))
+                            {
+                                Console.WriteLine("Thank you. You have a French Full Set Nail Care in " + place + " at " + time + " on " + date + ". See you then!");
+                                Console.ReadLine();
+                            }
+                            if (nail.Contains("french") && !(nail.Contains("full")))
+                            {
+                                Console.WriteLine("Thank you. You have a French Fill Nail Care in " + place + " at " + time + " on " + date + ". See you then!");
+                                Console.ReadLine();
+                            }
+                            return;
+                        }
+                    }
+                    Console.WriteLine("Sorry, that time is not available.");
+                    Console.ReadLine();
+                    return;
         }
 
 
@@ -10071,21 +10273,212 @@ namespace AppointRecognition.Domain
 
 
 
+        public void apptnailwcitywtimewdate(String time, String place, String date)
+        {
+                    Console.WriteLine("Ok. Would you like a Manicure, Pedicure, Manicure and Pedicure, Polish Change, Full Set Acrylic, Acrylic Fill, Pink and White Full Set, Nail Replacement, Gel Nails Full Set, Silk Nails Full Set, French Fill, French Full Set?");
+                    String nail = (Console.ReadLine().ToLower());
+                    if (nail.Contains("mani") && nail.Contains("pedi"))
+                    {
+                        Console.WriteLine("Ok. Would you like a French or Spa Manicure and Pedicure?");
+                        String manipedi = (Console.ReadLine().ToLower());
+                        if (manipedi.Contains("french"))
+                        {
+                            Console.WriteLine("Thank you. You have a French Manicure and Pedicure in " + place + " at " + time + " on " + date + ". See you then!");
+                            Console.ReadLine();
+                        }
+                        if (manipedi.Contains("spa"))
+                        {
+                            Console.WriteLine("Thank you. You have a Spa Manicure and Pedicure in " + place + " at " + time + " on " + date + ". See you then!");
+                            Console.ReadLine();
+                        }
+                    }
+                    if (nail.Contains("mani") && !(nail.Contains("pedi")))
+                    {
+                        Console.WriteLine("Ok. Would you like a French or Spa Manicure?");
+                        String mani = (Console.ReadLine().ToLower());
+                        if (mani.Contains("french"))
+                        {
+                            Console.WriteLine("Thank you. You have a French Manicure in " + place + " at " + time + " on " + date + ". See you then!");
+                            Console.ReadLine();
+                        }
+                        if (mani.Contains("spa"))
+                        {
+                            Console.WriteLine("Thank you. You have a Spa Manicure in " + place + " at " + time + " on " + date + ". See you then!");
+                            Console.ReadLine();
+                        }
+                    }
+                    if (nail.Contains("pedi") && !(nail.Contains("mani")))
+                    {
+                        Console.WriteLine("Ok. Would you like a French or Spa Pedicure?");
+                        String pedi = (Console.ReadLine().ToLower());
+                        if (pedi.Contains("french"))
+                        {
+                            Console.WriteLine("Thank you. You have a French Pedicure in " + place + " at " + time + " on " + date + ". See you then!");
+                            Console.ReadLine();
+                        }
+                        if (pedi.Contains("spa"))
+                        {
+                            Console.WriteLine("Thank you. You have a Spa Pedicure in " + place + " at " + time + " on " + date + ". See you then!");
+                            Console.ReadLine();
+                        }
+                    }
+                    if (nail.Contains("polish"))
+                    {
+                        Console.WriteLine("Ok. Would you like the Polish Change on Hands, Feet, or Hands and Feet?");
+                        String polish = (Console.ReadLine().ToLower());
+                        if (polish.Contains("hands") && polish.Contains("feet"))
+                        {
+                            Console.WriteLine("Thank you. You have a Polish Change on Hands and Feet in " + place + " at " + time + " on " + date + ". See you then!");
+                            Console.ReadLine();
+                        }
+                        if (polish.Contains("hands") && !(polish.Contains("feet")))
+                        {
+                            Console.WriteLine("Thank you. You have a Polish Change on Hands in " + place + " at " + time + " on " + date + ". See you then!");
+                            Console.ReadLine();
+                        }
+                        if (polish.Contains("feet") && !(polish.Contains("feet")))
+                        {
+                            Console.WriteLine("Thank you. You have a Polish Change on Feet in " + place + " at " + time + " on " + date + ". See you then!");
+                            Console.ReadLine();
+                        }
+                    }
+                    if (nail.Contains("full") && (nail.Contains("acrylic")))
+                    {
+                        Console.WriteLine("Ok. Would you like the Full Set Acrylic on Hands, Feet, or Hands and Feet?");
+                        String acrylicfull = (Console.ReadLine().ToLower());
+                        if (acrylicfull.Contains("hands") && acrylicfull.Contains("feet"))
+                        {
+                            Console.WriteLine("Thank you. You have a Full Set Acrylic on Hands and Feet in " + place + " at " + time + " on " + date + ". See you then!");
+                            Console.ReadLine();
+                        }
+                        if (acrylicfull.Contains("hands") && !(acrylicfull.Contains("feet")))
+                        {
+                            Console.WriteLine("Thank you. You have a Full Set Acrylic on Hands in " + place + " at " + time + " on " + date + ". See you then!");
+                            Console.ReadLine();
+                        }
+                        if (acrylicfull.Contains("feet") && !(acrylicfull.Contains("hands")))
+                        {
+                            Console.WriteLine("Thank you. You have a Full Set Acrylic on Feet in " + place + " at " + time + " on " + date + ". See you then!");
+                            Console.ReadLine();
+                        }
+                    }
+                    if (nail.Contains("acrylic") && (nail.Contains("fill")))
+                    {
+                        Console.WriteLine("Ok. Would you like the Acrylic Fill on Hands, Feet, or Hands and Feet?");
+                        String acrylicfill = (Console.ReadLine().ToLower());
+                        if (acrylicfill.Contains("hands") && acrylicfill.Contains("feet"))
+                        {
+                            Console.WriteLine("Thank you. You have a Acrylic Fill on Hands and Feet in " + place + " at " + time + " on " + date + ". See you then!");
+                            Console.ReadLine();
+                        }
+                        if (acrylicfill.Contains("hands") && !(acrylicfill.Contains("feet")))
+                        {
+                            Console.WriteLine("Thank you. You have a Acrylic Fill on Hands in " + place + " at " + time + " on " + date + ". See you then!");
+                            Console.ReadLine();
+                        }
+                        if (acrylicfill.Contains("feet") & !(acrylicfill.Contains("hands")))
+                        {
+                            Console.WriteLine("Thank you. You have a Acrylic Fill on Feet in " + place + " at " + time + " on " + date + ". See you then!");
+                            Console.ReadLine();
+                        }
+                    }
+                    if (nail.Contains("pink") || nail.Contains("white"))
+                    {
+                        Console.WriteLine("Ok. Would you like the Pink and White Full Set on Hands, Feet, or Hands and Feet?");
+                        String pinkwhite = (Console.ReadLine().ToLower());
+                        if (pinkwhite.Contains("hands") && pinkwhite.Contains("feet"))
+                        {
+                            Console.WriteLine("Thank you. You have a Pink and White Full Set on Hands and Feet in " + place + " at " + time + " on " + date + ". See you then!");
+                            Console.ReadLine();
+                        }
+                        if (pinkwhite.Contains("hands") && !(pinkwhite.Contains("feet")))
+                        {
+                            Console.WriteLine("Thank you. You have a Pink and White Full Set on Hands in " + place + " at " + time + " on " + date + ". See you then!");
+                            Console.ReadLine();
+                        }
+                        if (pinkwhite.Contains("feet") && !(pinkwhite.Contains("hands")))
+                        {
+                            Console.WriteLine("Thank you. You have a Pink and White Full Set on Feet in " + place + " at " + time + " on " + date + ". See you then!");
+                            Console.ReadLine();
+                        }
+                    }
+                    if (nail.Contains("replace"))
+                    {
+                        Console.WriteLine("Thank you. You have a Nail Replacement in " + place + " at " + time + " on " + date + ". See you then!");
+                        Console.ReadLine();
+                    }
+                    if (nail.Contains("gel"))
+                    {
+                        Console.WriteLine("Ok. Would you like the Gel Nails Full Set on Hands, Feet, or Hands and Feet?");
+                        String gel = (Console.ReadLine().ToLower());
+                        if (gel.Contains("hands") && gel.Contains("feet"))
+                        {
+                            Console.WriteLine("Thank you. You have a Gel Nails Full Set on Hands and Feet in " + place + " at " + time + " on " + date + ". See you then!");
+                            Console.ReadLine();
+                        }
+                        if (gel.Contains("hands") && !(gel.Contains("feet")))
+                        {
+                            Console.WriteLine("Thank you. You have a Gel Nails Full Set on Hands in " + place + " at " + time + " on " + date + ". See you then!");
+                            Console.ReadLine();
+                        }
+                        if (gel.Contains("feet") && !(gel.Contains("hands")))
+                        {
+                            Console.WriteLine("Thank you. You have a Gel Nails Full Set on Feet in " + place + " at " + time + " on " + date + ". See you then!");
+                            Console.ReadLine();
+                        }
+
+                    }
+                    if (nail.Contains("silk"))
+                    {
+                        Console.WriteLine("Ok. Would you like the Silk Nails Full Set on Hands, Feet, or Hands and Feet?");
+                        String silk = (Console.ReadLine().ToLower());
+                        if (silk.Contains("hands") && silk.Contains("feet"))
+                        {
+                            Console.WriteLine("Thank you. You have a Silk Nails Full Set on Hands and Feet in " + place + " at " + time + " on " + date + ". See you then!");
+                            Console.ReadLine();
+                        }
+                        if (silk.Contains("hands") && !(silk.Contains("feet")))
+                        {
+                            Console.WriteLine("Thank you. You have a Silk Nails Full Set on Hands in " + place + " at " + time + " on " + date + ". See you then!");
+                            Console.ReadLine();
+                        }
+                        if (silk.Contains("feet") && !(silk.Contains("hands")))
+                        {
+                            Console.WriteLine("Thank you. You have a Silk Nails Full Set on Feet in " + place + " at " + time + " on " + date + ". See you then!");
+                            Console.ReadLine();
+                        }
+
+                    }
+                    if (nail.Contains("french") && nail.Contains("full"))
+                    {
+                        Console.WriteLine("Thank you. You have a French Full Set Nail Care in " + place + " at " + time + " on " + date + ". See you then!");
+                        Console.ReadLine();
+                    }
+                    if (nail.Contains("french") && !(nail.Contains("full")))
+                    {
+                        Console.WriteLine("Thank you. You have a French Fill Nail Care in " + place + " at " + time + " on " + date + ". See you then!");
+                        Console.ReadLine();
+                    }
+                    return;
+        }
+
+
+
         public void apptnailchoose(String[] appointimes, String[] locations, String nailtype, String body, String[] datetimes)
         {
-            Console.WriteLine("Ok. What is the date you want your " + nailtype + " on " + body + " ? ");
+            Console.WriteLine("Ok. What is the date you want your " + nailtype + " on " + body + "?");
             String date = (Console.ReadLine());
             for (int z = datetimes.Length - 1; z >= 0; z--)
             {
                 if (date.Contains(datetimes[z]))
                 {
-                    Console.WriteLine("Ok. What time would you " + nailtype + " on " + body + " ? ");
+                    Console.WriteLine("Ok. What time would you " + nailtype + " on " + body + "?");
                     String time = (Console.ReadLine());
                     for (int i = 0; i < appointimes.Length; i++)
                     {
                         if (time.Contains(appointimes[i]))
                         {
-                            Console.WriteLine("Ok. Where do you want to hold your " + nailtype + " on " + body + " ? ");
+                            Console.WriteLine("Ok. Where do you want to hold your " + nailtype + " on " + body + "?");
                             String place = (Console.ReadLine().ToLower());
                             for (int j = 0; j < locations.Length; j++)
                             {
@@ -10112,15 +10505,45 @@ namespace AppointRecognition.Domain
 
 
 
+        public void apptnailchoosewdate(String[] appointimes, String[] locations, String nailtype, String body, String date)
+        {
+                    Console.WriteLine("Ok. What time would you " + nailtype + " on " + body + "?");
+                    String time = (Console.ReadLine());
+                    for (int i = 0; i < appointimes.Length; i++)
+                    {
+                        if (time.Contains(appointimes[i]))
+                        {
+                            Console.WriteLine("Ok. Where do you want to hold your " + nailtype + " on " + body + "?");
+                            String place = (Console.ReadLine().ToLower());
+                            for (int j = 0; j < locations.Length; j++)
+                            {
+                                if (place.Contains(locations[j]))
+                                {
+                                    Console.WriteLine("Thank you. You have a " + nailtype + " on " + body + " in " + locations[j] + " at " + appointimes[i] + " on " + date + ". See you then!");
+                                    return;
+                                }
+                            }
+                            Console.WriteLine("Sorry, I do not offer appointments at " + place + ".");
+                            Console.ReadLine();
+                            return;
+                        }
+                    }
+                    Console.WriteLine("Sorry, that time is not available.");
+                    Console.ReadLine();
+                    return;
+        }
+
+
+
         public void apptnailchoosewtime(String time, String[] locations, String nailtype, String body, String[] datetimes)
         {
-            Console.WriteLine("Ok. What is the date you want your " + nailtype + " on " + body + " ? ");
+            Console.WriteLine("Ok. What is the date you want your " + nailtype + " on " + body + "?");
             String date = (Console.ReadLine());
             for (int z = datetimes.Length - 1; z >= 0; z--)
             {
                 if (date.Contains(datetimes[z]))
                 {
-                    Console.WriteLine("Ok. Where do you want to hold your " + nailtype + " on " + body + " ? ");
+                    Console.WriteLine("Ok. Where do you want to hold your " + nailtype + " on " + body + "?");
                     String place = (Console.ReadLine().ToLower());
                     for (int j = 0; j < locations.Length; j++)
                     {
@@ -10142,15 +10565,34 @@ namespace AppointRecognition.Domain
 
 
 
+        public void apptnailchoosewtimewdate(String time, String[] locations, String nailtype, String body, String date)
+        {
+                    Console.WriteLine("Ok. Where do you want to hold your " + nailtype + " on " + body + "?");
+                    String place = (Console.ReadLine().ToLower());
+                    for (int j = 0; j < locations.Length; j++)
+                    {
+                        if (place.Contains(locations[j]))
+                        {
+                            Console.WriteLine("Thank you. You have a " + nailtype + " on " + body + " in " + locations[j] + " at " + time + " on " + date + ". See you then!");
+                            return;
+                        }
+                    }
+                    Console.WriteLine("Sorry, I do not offer appointments at " + place + ".");
+                    Console.ReadLine();
+                    return;
+        }
+
+
+
         public void apptnailchoosewcity(String[] appointimes, String place, String nailtype, String body, String[] datetimes)
         {
-            Console.WriteLine("Ok. What is the date you want your " + nailtype + " on " + body + " ? ");
+            Console.WriteLine("Ok. What is the date you want your " + nailtype + " on " + body + "?");
             String date = (Console.ReadLine());
             for (int z = datetimes.Length - 1; z >= 0; z--)
             {
                 if (date.Contains(datetimes[z]))
                 {
-                    Console.WriteLine("Ok. What time would you " + nailtype + " on " + body + " ? ");
+                    Console.WriteLine("Ok. What time would you " + nailtype + " on " + body + "?");
                     String time = (Console.ReadLine());
                     for (int i = 0; i < appointimes.Length; i++)
                     {
@@ -10172,9 +10614,28 @@ namespace AppointRecognition.Domain
 
 
 
+        public void apptnailchoosewcitywdate(String[] appointimes, String place, String nailtype, String body, String date)
+        {
+                    Console.WriteLine("Ok. What time would you " + nailtype + " on " + body + "?");
+                    String time = (Console.ReadLine());
+                    for (int i = 0; i < appointimes.Length; i++)
+                    {
+                        if (time.Contains(appointimes[i]))
+                        {
+                            Console.WriteLine("Thank you. You have a " + nailtype + " on " + body + " in " + place + " at " + appointimes[i] + " on " + date + ". See you then!");
+                            return;
+                        }
+                    }
+                    Console.WriteLine("Sorry, that time is not available.");
+                    Console.ReadLine();
+                    return;
+        }
+
+
+
         public void apptnailchoosewcitywtime(String time, String place, String nailtype, String body, String[] datetimes)
         {
-            Console.WriteLine("Ok. What is the date you want your " + nailtype + " on " + body + " ? ");
+            Console.WriteLine("Ok. What is the date you want your " + nailtype + " on " + body + "?");
             String date = (Console.ReadLine());
             for (int z = datetimes.Length - 1; z >= 0; z--)
             {
@@ -10191,21 +10652,29 @@ namespace AppointRecognition.Domain
 
 
 
+        public void apptnailchoosewcitywtimewdate(String time, String place, String nailtype, String body, String date)
+        {
+                    Console.WriteLine("Thank you. You have a " + nailtype + " on " + body + " in " + place + " at " + time + " on " + date + ". See you then!");
+                    return;
+        }
+
+
+
         public void apptnailchoosemani(String[] appointimes, String[] locations, String nailtype, String[] datetimes)
         {
-            Console.WriteLine("Ok. What is the date you want your " + nailtype + "? ");
+            Console.WriteLine("Ok. What is the date you want your " + nailtype + "?");
             String date = (Console.ReadLine());
             for (int z = datetimes.Length - 1; z >= 0; z--)
             {
                 if (date.Contains(datetimes[z]))
                 {
-                    Console.WriteLine("Ok. What time would you " + nailtype + "? ");
+                    Console.WriteLine("Ok. What time would you " + nailtype + "?");
                     String time = (Console.ReadLine());
                     for (int i = 0; i < appointimes.Length; i++)
                     {
                         if (time.Contains(appointimes[i]))
                         {
-                            Console.WriteLine("Ok. Where do you want to hold your " + nailtype + "? ");
+                            Console.WriteLine("Ok. Where do you want to hold your " + nailtype + "?");
                             String place = (Console.ReadLine().ToLower());
                             for (int j = 0; j < locations.Length; j++)
                             {
@@ -10232,15 +10701,45 @@ namespace AppointRecognition.Domain
 
 
 
+        public void apptnailchoosemaniwdate(String[] appointimes, String[] locations, String nailtype, String date)
+        {
+                    Console.WriteLine("Ok. What time would you " + nailtype + "?");
+                    String time = (Console.ReadLine());
+                    for (int i = 0; i < appointimes.Length; i++)
+                    {
+                        if (time.Contains(appointimes[i]))
+                        {
+                            Console.WriteLine("Ok. Where do you want to hold your " + nailtype + "?");
+                            String place = (Console.ReadLine().ToLower());
+                            for (int j = 0; j < locations.Length; j++)
+                            {
+                                if (place.Contains(locations[j]))
+                                {
+                                    Console.WriteLine("Thank you. You have a " + nailtype + " in " + locations[j] + " at " + appointimes[i] + " on " + date + ". See you then!");
+                                    return;
+                                }
+                            }
+                            Console.WriteLine("Sorry, I do not offer appointments at " + place + ".");
+                            Console.ReadLine();
+                            return;
+                        }
+                    }
+                    Console.WriteLine("Sorry, that time is not available.");
+                    Console.ReadLine();
+                    return;
+        }
+
+
+
         public void apptnailchoosemaniwtime(String time, String[] locations, String nailtype, String[] datetimes)
         {
-            Console.WriteLine("Ok. What is the date you want your " + nailtype + "? ");
+            Console.WriteLine("Ok. What is the date you want your " + nailtype + "?");
             String date = (Console.ReadLine());
             for (int z = datetimes.Length - 1; z >= 0; z--)
             {
                 if (date.Contains(datetimes[z]))
                 {
-                    Console.WriteLine("Ok. Where do you want to hold your " + nailtype + "? ");
+                    Console.WriteLine("Ok. Where do you want to hold your " + nailtype + "?");
                     String place = (Console.ReadLine().ToLower());
                     for (int j = 0; j < locations.Length; j++)
                     {
@@ -10262,15 +10761,34 @@ namespace AppointRecognition.Domain
 
 
 
+        public void apptnailchoosemaniwtimewdate(String time, String[] locations, String nailtype, String date)
+        {
+                    Console.WriteLine("Ok. Where do you want to hold your " + nailtype + "?");
+                    String place = (Console.ReadLine().ToLower());
+                    for (int j = 0; j < locations.Length; j++)
+                    {
+                        if (place.Contains(locations[j]))
+                        {
+                            Console.WriteLine("Thank you. You have a " + nailtype + " in " + locations[j] + " at " + time + " on " + date + ". See you then!");
+                            return;
+                        }
+                    }
+                    Console.WriteLine("Sorry, I do not offer appointments at " + place + ".");
+                    Console.ReadLine();
+                    return;
+        }
+
+
+
         public void apptnailchoosemaniwcity(String[] appointimes, String place, String nailtype, String[] datetimes)
         {
-            Console.WriteLine("Ok. What is the date you want your " + nailtype + "? ");
+            Console.WriteLine("Ok. What is the date you want your " + nailtype + "?");
             String date = (Console.ReadLine());
             for (int z = datetimes.Length - 1; z >= 0; z--)
             {
                 if (date.Contains(datetimes[z]))
                 {
-                    Console.WriteLine("Ok. What time would you " + nailtype + "? ");
+                    Console.WriteLine("Ok. What time would you " + nailtype + "?");
                     String time = (Console.ReadLine());
                     for (int i = 0; i < appointimes.Length; i++)
                     {
@@ -10292,9 +10810,28 @@ namespace AppointRecognition.Domain
 
 
 
+        public void apptnailchoosemaniwcitywdate(String[] appointimes, String place, String nailtype, String date)
+        {
+                    Console.WriteLine("Ok. What time would you " + nailtype + "?");
+                    String time = (Console.ReadLine());
+                    for (int i = 0; i < appointimes.Length; i++)
+                    {
+                        if (time.Contains(appointimes[i]))
+                        {
+                            Console.WriteLine("Thank you. You have a " + nailtype + " in " + place + " at " + appointimes[i] + " on " + date + ". See you then!");
+                            return;
+                        }
+                    }
+                    Console.WriteLine("Sorry, that time is not available.");
+                    Console.ReadLine();
+                    return;
+        }
+
+
+
         public void apptnailchoosemaniwcitywtime(String time, String place, String nailtype, String[] datetimes)
         {
-            Console.WriteLine("Ok. What is the date you want your " + nailtype + "? ");
+            Console.WriteLine("Ok. What is the date you want your " + nailtype + "?");
             String date = (Console.ReadLine());
             for (int z = datetimes.Length - 1; z >= 0; z--)
             {
@@ -10307,6 +10844,14 @@ namespace AppointRecognition.Domain
             Console.WriteLine("Sorry, that date is not available.");
             Console.ReadLine();
             return;
+        }
+
+
+
+        public void apptnailchoosemaniwcitywtimewdate(String time, String place, String nailtype, String date)
+        {
+                    Console.WriteLine("Thank you. You have a " + nailtype + " in " + place + " at " + time + " on " + date + ". See you then!");
+                    return;
         }
 
 
@@ -10366,6 +10911,50 @@ namespace AppointRecognition.Domain
 
 
 
+        public void apptmassagewdate(String[] appointimes, String[] locations, String[] massagetime, String date)
+        {
+                    Console.WriteLine("Ok. What time would you want your massage? ");
+                    String time = (Console.ReadLine());
+                    for (int i = 0; i < appointimes.Length; i++)
+                    {
+                        if (time.Contains(appointimes[i]))
+                        {
+                            Console.WriteLine("Ok. Where do you want to hold your massage?");
+                            String place = (Console.ReadLine().ToLower());
+                            for (int j = 0; j < locations.Length; j++)
+                            {
+                                if (place.Contains(locations[j]))
+                                {
+                                    Console.WriteLine("Ok. Would you like a Swedish, Reflexology, Shiatsu, Therapeutic, Sport, Medical, Hot Stone, or Ashiatsu Oriental Bar Massage?");
+                                    String massage = (Console.ReadLine().ToLower());
+                                    if (massage.Contains("swed") || massage.Contains("reflex") || massage.Contains("shiatsu") || massage.Contains("therap") || massage.Contains("sport") || massage.Contains("medi") || massage.Contains("hot") || massage.Contains("ashiatsu"))
+                                    {
+                                        Console.WriteLine("Ok. Would you like your massage to be 15, 30, 45, 60, 75, 90, or 120 minutes?");
+                                        String timemassage = (Console.ReadLine().ToLower());
+                                        for (int k = 0; k < massagetime.Length; k++)
+                                        {
+                                            if (timemassage.Contains(massagetime[k]))
+                                            {
+                                                Console.WriteLine("Thank you. You have a " + massage + " massage in " + locations[j] + " at " + appointimes[i] + " on " + date + " for " + massagetime[k] + " minutes. See you then!");
+                                                Console.ReadLine();
+                                            }
+                                        }
+                                    }
+                                    return;
+                                }
+                            }
+                            Console.WriteLine("Sorry, I do not offer appointments at " + place + ".");
+                            Console.ReadLine();
+                            return;
+                        }
+                    }
+                    Console.WriteLine("Sorry, that time is not available.");
+                    Console.ReadLine();
+                    return;
+        }
+
+
+
         public void apptmassagewtime(String time, String[] locations, String[] massagetime, String[] datetimes)
         {
             Console.WriteLine("Ok. What is the date you want your massage? ");
@@ -10406,6 +10995,39 @@ namespace AppointRecognition.Domain
             Console.WriteLine("Sorry, that date is not available.");
             Console.ReadLine();
             return;
+        }
+
+
+
+        public void apptmassagewtimewdate(String time, String[] locations, String[] massagetime, String date)
+        {
+                    Console.WriteLine("Ok. Where do you want to hold your massage?");
+                    String place = (Console.ReadLine().ToLower());
+                    for (int j = 0; j < locations.Length; j++)
+                    {
+                        if (place.Contains(locations[j]))
+                        {
+                            Console.WriteLine("Ok. Would you like a Swedish, Reflexology, Shiatsu, Therapeutic, Sport, Medical, Hot Stone, or Ashiatsu Oriental Bar Massage?");
+                            String massage = (Console.ReadLine().ToLower());
+                            if (massage.Contains("swed") || massage.Contains("reflex") || massage.Contains("shiatsu") || massage.Contains("therap") || massage.Contains("sport") || massage.Contains("medi") || massage.Contains("hot") || massage.Contains("ashiatsu"))
+                            {
+                                Console.WriteLine("Ok. Would you like your massage to be 15, 30, 45, 60, 75, 90, or 120 minutes?");
+                                String timemassage = (Console.ReadLine().ToLower());
+                                for (int k = 0; k < massagetime.Length; k++)
+                                {
+                                    if (timemassage.Contains(massagetime[k]))
+                                    {
+                                        Console.WriteLine("Thank you. You have a " + massage + " massage in " + locations[j] + " at " + time + " on " + date + " for " + massagetime[k] + " minutes. See you then!");
+                                        Console.ReadLine();
+                                    }
+                                }
+                            }
+                            return;
+                        }
+                    }
+                    Console.WriteLine("Sorry, I do not offer appointments at " + place + ".");
+                    Console.ReadLine();
+                    return;
         }
 
 
@@ -10454,6 +11076,39 @@ namespace AppointRecognition.Domain
 
 
 
+        public void apptmassagewcitywdate(String[] appointimes, String place, String[] massagetime, String date)
+        {
+                    Console.WriteLine("Ok. What time would you want your massage? ");
+                    String time = (Console.ReadLine());
+                    for (int i = 0; i < appointimes.Length; i++)
+                    {
+                        if (time.Contains(appointimes[i]))
+                        {
+                            Console.WriteLine("Ok. Would you like a Swedish, Reflexology, Shiatsu, Therapeutic, Sport, Medical, Hot Stone, or Ashiatsu Oriental Bar Massage?");
+                            String massage = (Console.ReadLine().ToLower());
+                            if (massage.Contains("swed") || massage.Contains("reflex") || massage.Contains("shiatsu") || massage.Contains("therap") || massage.Contains("sport") || massage.Contains("medi") || massage.Contains("hot") || massage.Contains("ashiatsu"))
+                            {
+                                Console.WriteLine("Ok. Would you like your massage to be 15, 30, 45, 60, 75, 90, or 120 minutes?");
+                                String timemassage = (Console.ReadLine().ToLower());
+                                for (int k = 0; k < massagetime.Length; k++)
+                                {
+                                    if (timemassage.Contains(massagetime[k]))
+                                    {
+                                        Console.WriteLine("Thank you. You have a " + massage + " massage in " + place + " at " + appointimes[i] + " on " + date + " for " + massagetime[k] + " minutes. See you then!");
+                                        Console.ReadLine();
+                                    }
+                                }
+                            }
+                            return;
+                        }
+                    }
+                    Console.WriteLine("Sorry, that time is not available.");
+                    Console.ReadLine();
+                    return;
+        }
+
+
+
         public void apptmassagewcitywtime(String time, String place, String[] massagetime, String[] datetimes)
         {
             Console.WriteLine("Ok. What is the date you want your massage? ");
@@ -10483,6 +11138,28 @@ namespace AppointRecognition.Domain
             Console.WriteLine("Sorry, that date is not available.");
             Console.ReadLine();
             return;
+        }
+
+
+
+        public void apptmassagewcitywtimewdate(String time, String place, String[] massagetime, String date)
+        {
+                    Console.WriteLine("Ok. Would you like a Swedish, Reflexology, Shiatsu, Therapeutic, Sport, Medical, Hot Stone, or Ashiatsu Oriental Bar Massage?");
+                    String massage = (Console.ReadLine().ToLower());
+                    if (massage.Contains("swed") || massage.Contains("reflex") || massage.Contains("shiatsu") || massage.Contains("therap") || massage.Contains("sport") || massage.Contains("medi") || massage.Contains("hot") || massage.Contains("ashiatsu"))
+                    {
+                        Console.WriteLine("Ok. Would you like your massage to be 15, 30, 45, 60, 75, 90, or 120 minutes?");
+                        String timemassage = (Console.ReadLine().ToLower());
+                        for (int k = 0; k < massagetime.Length; k++)
+                        {
+                            if (timemassage.Contains(massagetime[k]))
+                            {
+                                Console.WriteLine("Thank you. You have a " + massage + " massage in " + place + " at " + time + " on " + date + " for " + massagetime[k] + " minutes. See you then!");
+                                Console.ReadLine();
+                            }
+                        }
+                    }
+                    return;
         }
 
 
@@ -10537,6 +11214,45 @@ namespace AppointRecognition.Domain
 
 
 
+        public void apptmassageservicewdate(String[] appointimes, String[] locations, String massage, String[] massagetime, String date)
+        {
+                    Console.WriteLine("Ok. What time would you want your " + massage + " massage? ");
+                    String time = (Console.ReadLine());
+                    for (int i = 0; i < appointimes.Length; i++)
+                    {
+                        if (time.Contains(appointimes[i]))
+                        {
+                            Console.WriteLine("Ok. Where do you want to hold your " + massage + " massage?");
+                            String place = (Console.ReadLine().ToLower());
+                            for (int j = 0; j < locations.Length; j++)
+                            {
+                                if (place.Contains(locations[j]))
+                                {
+                                    Console.WriteLine("Ok. Would you like your massage " + massage + " to be 15, 30, 45, 60, 75, 90, or 120 minutes?");
+                                    String timemassage = (Console.ReadLine().ToLower());
+                                    for (int k = 0; k < massagetime.Length; k++)
+                                    {
+                                        if (timemassage.Contains(massagetime[k]))
+                                        {
+                                            Console.WriteLine("Thank you. You have a " + massage + " massage in " + locations[j] + " at " + appointimes[i] + " on " + date + " for " + massagetime[k] + " minutes. See you then!");
+                                            Console.ReadLine();
+                                        }
+                                    }
+                                    return;
+                                }
+                            }
+                            Console.WriteLine("Sorry, I do not offer appointments at " + place + ".");
+                            Console.ReadLine();
+                            return;
+                        }
+                    }
+                    Console.WriteLine("Sorry, that time is not available.");
+                    Console.ReadLine();
+                    return;
+        }
+
+
+
         public void apptmassageservicewtime(String time, String[] locations, String massage, String[] massagetime, String[] datetimes)
         {
             Console.WriteLine("Ok. What is the date you want your " + massage + " massage? ");
@@ -10572,6 +11288,34 @@ namespace AppointRecognition.Domain
             Console.WriteLine("Sorry, that date is not available.");
             Console.ReadLine();
             return;
+        }
+
+
+
+        public void apptmassageservicewtimewdate(String time, String[] locations, String massage, String[] massagetime, String date)
+        {
+                    Console.WriteLine("Ok. Where do you want to hold your " + massage + " massage?");
+                    String place = (Console.ReadLine().ToLower());
+                    for (int j = 0; j < locations.Length; j++)
+                    {
+                        if (place.Contains(locations[j]))
+                        {
+                            Console.WriteLine("Ok. Would you like your massage " + massage + " to be 15, 30, 45, 60, 75, 90, or 120 minutes?");
+                            String timemassage = (Console.ReadLine().ToLower());
+                            for (int k = 0; k < massagetime.Length; k++)
+                            {
+                                if (timemassage.Contains(massagetime[k]))
+                                {
+                                    Console.WriteLine("Thank you. You have a " + massage + " massage in " + locations[j] + " at " + time + " on " + date + " for " + massagetime[k] + " minutes. See you then!");
+                                    Console.ReadLine();
+                                }
+                            }
+                            return;
+                        }
+                    }
+                    Console.WriteLine("Sorry, I do not offer appointments at " + place + ".");
+                    Console.ReadLine();
+                    return;
         }
 
 
@@ -10615,6 +11359,34 @@ namespace AppointRecognition.Domain
 
 
 
+        public void apptmassageservicewcitywdate(String[] appointimes, String place, String massage, String[] massagetime, String date)
+        {
+                    Console.WriteLine("Ok. What time would you want your " + massage + " massage? ");
+                    String time = (Console.ReadLine());
+                    for (int i = 0; i < appointimes.Length; i++)
+                    {
+                        if (time.Contains(appointimes[i]))
+                        {
+                            Console.WriteLine("Ok. Would you like your massage " + massage + " to be 15, 30, 45, 60, 75, 90, or 120 minutes?");
+                            String timemassage = (Console.ReadLine().ToLower());
+                            for (int k = 0; k < massagetime.Length; k++)
+                            {
+                                if (timemassage.Contains(massagetime[k]))
+                                {
+                                    Console.WriteLine("Thank you. You have a " + massage + " massage in " + place + " at " + appointimes[i] + " on " + date + " for " + massagetime[k] + " minutes. See you then!");
+                                    Console.ReadLine();
+                                }
+                            }
+                            return;
+                        }
+                    }
+                    Console.WriteLine("Sorry, that time is not available.");
+                    Console.ReadLine();
+                    return;
+        }
+
+
+
         public void apptmassageservicewcitywtime(String time, String place, String massage, String[] massagetime, String[] datetimes)
         {
             Console.WriteLine("Ok. What is the date you want your " + massage + " massage? ");
@@ -10639,6 +11411,23 @@ namespace AppointRecognition.Domain
             Console.WriteLine("Sorry, that date is not available.");
             Console.ReadLine();
             return;
+        }
+
+
+
+        public void apptmassageservicewcitywtimewdate(String time, String place, String massage, String[] massagetime, String date)
+        {
+                    Console.WriteLine("Ok. Would you like your massage " + massage + " to be 15, 30, 45, 60, 75, 90, or 120 minutes?");
+                    String timemassage = (Console.ReadLine().ToLower());
+                    for (int k = 0; k < massagetime.Length; k++)
+                    {
+                        if (timemassage.Contains(massagetime[k]))
+                        {
+                            Console.WriteLine("Thank you. You have a " + massage + " massage in " + place + " at " + time + " on " + date + " for " + massagetime[k] + " minutes. See you then!");
+                            Console.ReadLine();
+                        }
+                    }
+                    return;
         }
 
 
@@ -10718,6 +11507,70 @@ namespace AppointRecognition.Domain
 
 
 
+        public void apptskinwdate(String[] appointimes, String[] locations, String[] exfol, String date)
+        {
+                    Console.WriteLine("Ok. What time would you want your skin care appointment? ");
+                    String time = (Console.ReadLine());
+                    for (int i = 0; i < appointimes.Length; i++)
+                    {
+                        if (time.Contains(appointimes[i]))
+                        {
+                            Console.WriteLine("Ok. Where do you want to hold your skin care appointment?");
+                            String place = (Console.ReadLine().ToLower());
+                            for (int j = 0; j < locations.Length; j++)
+                            {
+                                if (place.Contains(locations[j]))
+                                {
+                                    Console.WriteLine("Ok. Would you like an Advanced Exfoliation or Facial?");
+                                    String skin = (Console.ReadLine().ToLower());
+                                    if (skin.Contains("exfol"))
+                                    {
+                                        Console.WriteLine("Ok. Would you like a Jessner, Peptide, Lactic, Glycolic, Hydrating, Vitamin C, Pumpkin, Salicylic, TCA peels, or Retinol Treatment Exfoliation?");
+                                        String exfoli = (Console.ReadLine().ToLower());
+                                        for (int m = 0; m < exfol.Length; m++)
+                                        {
+                                            if (exfoli.Contains(exfol[m]))
+                                            {
+                                                Console.WriteLine("Thank you. You have a " + exfoli + " exfoliation in " + locations[j] + " at " + appointimes[i] + " on " + date + ". See you then!");
+                                                Console.ReadLine();
+                                            }
+                                        }
+                                    }
+                                    if (skin.Contains("facial"))
+                                    {
+                                        Console.WriteLine("Ok. Would you like a Facial With Extraction, Back Facial, or Microdermabrasion");
+                                        String facial = (Console.ReadLine().ToLower());
+                                        if (facial.Contains("extraction"))
+                                        {
+                                            Console.WriteLine("Thank you. You have a Facial With Extraction in " + place + " at " + time + " on " + date + ". See you then!");
+                                            Console.ReadLine();
+                                        }
+                                        if (facial.Contains("back"))
+                                        {
+                                            Console.WriteLine("Thank you. You have a Back Facial in " + place + " at " + time + " on " + date + ". See you then!");
+                                            Console.ReadLine();
+                                        }
+                                        if (facial.Contains("micro"))
+                                        {
+                                            Console.WriteLine("Thank you. You have a Microdermabrasion Facial in " + place + " at " + time + " on " + date + ". See you then!");
+                                            Console.ReadLine();
+                                        }
+                                    }
+                                    return;
+                                }
+                            }
+                            Console.WriteLine("Sorry, I do not offer appointments at " + place + ".");
+                            Console.ReadLine();
+                            return;
+                        }
+                    }
+                    Console.WriteLine("Sorry, that time is not available.");
+                    Console.ReadLine();
+                    return;
+        }
+
+
+
         public void apptskinwtime(String time, String[] locations, String[] exfol, String[] datetimes)
         {
             Console.WriteLine("Ok. What is the date you want your skin care appointment? ");
@@ -10778,6 +11631,59 @@ namespace AppointRecognition.Domain
             Console.WriteLine("Sorry, that date is not available.");
             Console.ReadLine();
             return;
+        }
+
+
+
+        public void apptskinwtimewdate(String time, String[] locations, String[] exfol, String date)
+        {
+                    Console.WriteLine("Ok. Where do you want to hold your skin care appointment?");
+                    String place = (Console.ReadLine().ToLower());
+                    for (int j = 0; j < locations.Length; j++)
+                    {
+                        if (place.Contains(locations[j]))
+                        {
+                            Console.WriteLine("Ok. Would you like an Advanced Exfoliation or Facial?");
+                            String skin = (Console.ReadLine().ToLower());
+                            if (skin.Contains("exfol"))
+                            {
+                                Console.WriteLine("Ok. Would you like a Jessner, Peptide, Lactic, Glycolic, Hydrating, Vitamin C, Pumpkin, Salicylic, TCA peels, or Retinol Treatment Exfoliation?");
+                                String exfoli = (Console.ReadLine().ToLower());
+                                for (int m = 0; m < exfol.Length; m++)
+                                {
+                                    if (exfoli.Contains(exfol[m]))
+                                    {
+                                        Console.WriteLine("Thank you. You have a " + exfoli + " exfoliation in " + locations[j] + " at " + time + " on " + date + ". See you then!");
+                                        Console.ReadLine();
+                                    }
+                                }
+                            }
+                            if (skin.Contains("facial"))
+                            {
+                                Console.WriteLine("Ok. Would you like a Facial With Extraction, Back Facial, or Microdermabrasion");
+                                String facial = (Console.ReadLine().ToLower());
+                                if (facial.Contains("extraction"))
+                                {
+                                    Console.WriteLine("Thank you. You have a Facial With Extraction in " + place + " at " + time + " on " + date + ". See you then!");
+                                    Console.ReadLine();
+                                }
+                                if (facial.Contains("back"))
+                                {
+                                    Console.WriteLine("Thank you. You have a Back Facial in " + place + " at " + time + " on " + date + ". See you then!");
+                                    Console.ReadLine();
+                                }
+                                if (facial.Contains("micro"))
+                                {
+                                    Console.WriteLine("Thank you. You have a Microdermabrasion Facial in " + place + " at " + time + " on " + date + ". See you then!");
+                                    Console.ReadLine();
+                                }
+                            }
+                            return;
+                        }
+                    }
+                    Console.WriteLine("Sorry, I do not offer appointments at " + place + ".");
+                    Console.ReadLine();
+                    return;
         }
 
 
@@ -10846,6 +11752,59 @@ namespace AppointRecognition.Domain
 
 
 
+        public void apptskinwcitywdate(String[] appointimes, String place, String[] exfol, String date)
+        {
+                    Console.WriteLine("Ok. What time would you want your skin care appointment? ");
+                    String time = (Console.ReadLine());
+                    for (int i = 0; i < appointimes.Length; i++)
+                    {
+                        if (time.Contains(appointimes[i]))
+                        {
+                            Console.WriteLine("Ok. Would you like an Advanced Exfoliation or Facial?");
+                            String skin = (Console.ReadLine().ToLower());
+                            if (skin.Contains("exfol"))
+                            {
+                                Console.WriteLine("Ok. Would you like a Jessner, Peptide, Lactic, Glycolic, Hydrating, Vitamin C, Pumpkin, Salicylic, TCA peels, or Retinol Treatment Exfoliation?");
+                                String exfoli = (Console.ReadLine().ToLower());
+                                for (int m = 0; m < exfol.Length; m++)
+                                {
+                                    if (exfoli.Contains(exfol[m]))
+                                    {
+                                        Console.WriteLine("Thank you. You have a " + exfoli + " exfoliation in " + place + " at " + appointimes[i] + " on " + date + ". See you then!");
+                                        Console.ReadLine();
+                                    }
+                                }
+                            }
+                            if (skin.Contains("facial"))
+                            {
+                                Console.WriteLine("Ok. Would you like a Facial With Extraction, Back Facial, or Microdermabrasion");
+                                String facial = (Console.ReadLine().ToLower());
+                                if (facial.Contains("extraction"))
+                                {
+                                    Console.WriteLine("Thank you. You have a Facial With Extraction in " + place + " at " + time + " on " + date + ". See you then!");
+                                    Console.ReadLine();
+                                }
+                                if (facial.Contains("back"))
+                                {
+                                    Console.WriteLine("Thank you. You have a Back Facial in " + place + " at " + time + " on " + date + ". See you then!");
+                                    Console.ReadLine();
+                                }
+                                if (facial.Contains("micro"))
+                                {
+                                    Console.WriteLine("Thank you. You have a Microdermabrasion Facial in " + place + " at " + time + " on " + date + ". See you then!");
+                                    Console.ReadLine();
+                                }
+                            }
+                            return;
+                        }
+                    }
+                    Console.WriteLine("Sorry, that time is not available.");
+                    Console.ReadLine();
+                    return;
+        }
+
+
+
         public void apptskinwcitywtime(String time, String place, String[] exfol, String[] datetimes)
         {
             Console.WriteLine("Ok. What is the date you want your skin care appointment? ");
@@ -10895,6 +11854,48 @@ namespace AppointRecognition.Domain
             Console.WriteLine("Sorry, that date is not available.");
             Console.ReadLine();
             return;
+        }
+
+
+
+        public void apptskinwcitywtimewdate(String time, String place, String[] exfol, String date)
+        {
+                    Console.WriteLine("Ok. Would you like an Advanced Exfoliation or Facial?");
+                    String skin = (Console.ReadLine().ToLower());
+                    if (skin.Contains("exfol"))
+                    {
+                        Console.WriteLine("Ok. Would you like a Jessner, Peptide, Lactic, Glycolic, Hydrating, Vitamin C, Pumpkin, Salicylic, TCA peels, or Retinol Treatment Exfoliation?");
+                        String exfoli = (Console.ReadLine().ToLower());
+                        for (int m = 0; m < exfol.Length; m++)
+                        {
+                            if (exfoli.Contains(exfol[m]))
+                            {
+                                Console.WriteLine("Thank you. You have a " + exfoli + " exfoliation in " + place + " at " + time + " on " + date + ". See you then!");
+                                Console.ReadLine();
+                            }
+                        }
+                    }
+                    if (skin.Contains("facial"))
+                    {
+                        Console.WriteLine("Ok. Would you like a Facial With Extraction, Back Facial, or Microdermabrasion");
+                        String facial = (Console.ReadLine().ToLower());
+                        if (facial.Contains("extraction"))
+                        {
+                            Console.WriteLine("Thank you. You have a Facial With Extraction in " + place + " at " + time + " on " + date + ". See you then!");
+                            Console.ReadLine();
+                        }
+                        if (facial.Contains("back"))
+                        {
+                            Console.WriteLine("Thank you. You have a Back Facial in " + place + " at " + time + " on " + date + ". See you then!");
+                            Console.ReadLine();
+                        }
+                        if (facial.Contains("micro"))
+                        {
+                            Console.WriteLine("Thank you. You have a Microdermabrasion Facial in " + place + " at " + time + " on " + date + ". See you then!");
+                            Console.ReadLine();
+                        }
+                    }
+                    return;
         }
 
 
@@ -10949,6 +11950,45 @@ namespace AppointRecognition.Domain
 
 
 
+        public void apptskinexfolwdate(String[] appointimes, String[] locations, String[] exfol, String date)
+        {
+                    Console.WriteLine("Ok. What time would you want your exfoliation appointment? ");
+                    String time = (Console.ReadLine());
+                    for (int i = 0; i < appointimes.Length; i++)
+                    {
+                        if (time.Contains(appointimes[i]))
+                        {
+                            Console.WriteLine("Ok. Where do you want to hold your exfoliation appointment?");
+                            String place = (Console.ReadLine().ToLower());
+                            for (int j = 0; j < locations.Length; j++)
+                            {
+                                if (place.Contains(locations[j]))
+                                {
+                                    Console.WriteLine("Ok. Would you like a Jessner, Peptide, Lactic, Glycolic, Hydrating, Vitamin C, Pumpkin, Salicylic, TCA peels, or Retinol Treatment Exfoliation?");
+                                    String exfoli = (Console.ReadLine().ToLower());
+                                    for (int m = 0; m < exfol.Length; m++)
+                                    {
+                                        if (exfoli.Contains(exfol[m]))
+                                        {
+                                            Console.WriteLine("Thank you. You have a " + exfoli + " exfoliation in " + locations[j] + " at " + appointimes[i] + " on " + date + ". See you then!");
+                                            Console.ReadLine();
+                                        }
+                                    }
+                                    return;
+                                }
+                            }
+                            Console.WriteLine("Sorry, I do not offer appointments at " + place + ".");
+                            Console.ReadLine();
+                            return;
+                        }
+                    }
+                    Console.WriteLine("Sorry, that time is not available.");
+                    Console.ReadLine();
+                    return;
+        }
+
+
+
         public void apptskinexfolwtime(String time, String[] locations, String[] exfol, String[] datetimes)
         {
             Console.WriteLine("Ok. What is the date you want your exfoliation appointment? ");
@@ -10984,6 +12024,34 @@ namespace AppointRecognition.Domain
             Console.WriteLine("Sorry, that date is not available.");
             Console.ReadLine();
             return;
+        }
+
+
+
+        public void apptskinexfolwtimewdate(String time, String[] locations, String[] exfol, String date)
+        {
+                    Console.WriteLine("Ok. Where do you want to hold your exfoliation appointment?");
+                    String place = (Console.ReadLine().ToLower());
+                    for (int j = 0; j < locations.Length; j++)
+                    {
+                        if (place.Contains(locations[j]))
+                        {
+                            Console.WriteLine("Ok. Would you like a Jessner, Peptide, Lactic, Glycolic, Hydrating, Vitamin C, Pumpkin, Salicylic, TCA peels, or Retinol Treatment Exfoliation?");
+                            String exfoli = (Console.ReadLine().ToLower());
+                            for (int m = 0; m < exfol.Length; m++)
+                            {
+                                if (exfoli.Contains(exfol[m]))
+                                {
+                                    Console.WriteLine("Thank you. You have a " + exfoli + " exfoliation in " + locations[j] + " at " + time + " on " + date + ". See you then!");
+                                    Console.ReadLine();
+                                }
+                            }
+                            return;
+                        }
+                    }
+                    Console.WriteLine("Sorry, I do not offer appointments at " + place + ".");
+                    Console.ReadLine();
+                    return;
         }
 
 
@@ -11027,6 +12095,34 @@ namespace AppointRecognition.Domain
 
 
 
+        public void apptskinexfolwcitywdate(String[] appointimes, String place, String[] exfol, String date)
+        {
+                    Console.WriteLine("Ok. What time would you want your exfoliation appointment? ");
+                    String time = (Console.ReadLine());
+                    for (int i = 0; i < appointimes.Length; i++)
+                    {
+                        if (time.Contains(appointimes[i]))
+                        {
+                            Console.WriteLine("Ok. Would you like a Jessner, Peptide, Lactic, Glycolic, Hydrating, Vitamin C, Pumpkin, Salicylic, TCA peels, or Retinol Treatment Exfoliation?");
+                            String exfoli = (Console.ReadLine().ToLower());
+                            for (int m = 0; m < exfol.Length; m++)
+                            {
+                                if (exfoli.Contains(exfol[m]))
+                                {
+                                    Console.WriteLine("Thank you. You have a " + exfoli + " exfoliation in " + place + " at " + appointimes[i] + " on " + date + ". See you then!");
+                                    Console.ReadLine();
+                                }
+                            }
+                            return;
+                        }
+                    }
+                    Console.WriteLine("Sorry, that time is not available.");
+                    Console.ReadLine();
+                    return;
+        }
+
+
+
         public void apptskinexfolwcitywtime(String time, String place, String[] exfol, String[] datetimes)
         {
             Console.WriteLine("Ok. What is the date you want your exfoliation appointment? ");
@@ -11055,622 +12151,19 @@ namespace AppointRecognition.Domain
 
 
 
-        public void apptskinexfolservice(String[] appointimes, String[] locations, String exfoli, String[] datetimes)
+        public void apptskinexfolwcitywtimewdate(String time, String place, String[] exfol, String date)
         {
-            Console.WriteLine("Ok. What is the date you want your " + exfoli + " exfoliation appointment? ");
-            String date = (Console.ReadLine());
-            for (int z = datetimes.Length - 1; z >= 0; z--)
-            {
-                if (date.Contains(datetimes[z]))
-                {
-                    Console.WriteLine("Ok. What time would you want your " + exfoli + " exfoliation appointment? ");
-                    String time = (Console.ReadLine());
-                    for (int i = 0; i < appointimes.Length; i++)
+                    Console.WriteLine("Ok. Would you like a Jessner, Peptide, Lactic, Glycolic, Hydrating, Vitamin C, Pumpkin, Salicylic, TCA peels, or Retinol Treatment Exfoliation?");
+                    String exfoli = (Console.ReadLine().ToLower());
+                    for (int m = 0; m < exfol.Length; m++)
                     {
-                        if (time.Contains(appointimes[i]))
+                        if (exfoli.Contains(exfol[m]))
                         {
-                            Console.WriteLine("Ok. Where do you want to hold your " + exfoli + " exfoliation appointment?");
-                            String place = (Console.ReadLine().ToLower());
-                            for (int j = 0; j < locations.Length; j++)
-                            {
-                                if (place.Contains(locations[j]))
-                                {
-                                    Console.WriteLine("Thank you. You have a " + exfoli + " exfoliation in " + locations[j] + " at " + appointimes[i] + " on " + datetimes[z] + ". See you then!");
-                                    Console.ReadLine();
-                                    return;
-                                }
-                            }
-                            Console.WriteLine("Sorry, I do not offer appointments at " + place + ".");
+                            Console.WriteLine("Thank you. You have a " + exfoli + " exfoliation in " + place + " at " + time + " on " + date + ". See you then!");
                             Console.ReadLine();
-                            return;
                         }
                     }
-                    Console.WriteLine("Sorry, that time is not available.");
-                    Console.ReadLine();
                     return;
-                }
-            }
-            Console.WriteLine("Sorry, that date is not available.");
-            Console.ReadLine();
-            return;
-        }
-
-
-
-        public void apptskinexfolservicewtime(String time, String[] locations, String exfoli, String[] datetimes)
-        {
-            Console.WriteLine("Ok. What is the date you want your " + exfoli + " exfoliation appointment? ");
-            String date = (Console.ReadLine());
-            for (int z = datetimes.Length - 1; z >= 0; z--)
-            {
-                if (date.Contains(datetimes[z]))
-                {
-                    Console.WriteLine("Ok. Where do you want to hold your " + exfoli + " exfoliation appointment?");
-                    String place = (Console.ReadLine().ToLower());
-                    for (int j = 0; j < locations.Length; j++)
-                    {
-                        if (place.Contains(locations[j]))
-                        {
-                            Console.WriteLine("Thank you. You have a " + exfoli + " exfoliation in " + locations[j] + " at " + time + " on " + datetimes[z] + ". See you then!");
-                            Console.ReadLine();
-                            return;
-                        }
-                    }
-                    Console.WriteLine("Sorry, I do not offer appointments at " + place + ".");
-                    Console.ReadLine();
-                    return;
-                }
-            }
-            Console.WriteLine("Sorry, that date is not available.");
-            Console.ReadLine();
-            return;
-        }
-
-
-
-        public void apptskinexfolservicewcity(String[] appointimes, String place, String exfoli, String[] datetimes)
-        {
-            Console.WriteLine("Ok. What is the date you want your " + exfoli + " exfoliation appointment? ");
-            String date = (Console.ReadLine());
-            for (int z = datetimes.Length - 1; z >= 0; z--)
-            {
-                if (date.Contains(datetimes[z]))
-                {
-                    Console.WriteLine("Ok. What time would you want your " + exfoli + " exfoliation appointment? ");
-                    String time = (Console.ReadLine());
-                    for (int i = 0; i < appointimes.Length; i++)
-                    {
-                        if (time.Contains(appointimes[i]))
-                        {
-                            Console.WriteLine("Thank you. You have a " + exfoli + " exfoliation in " + place + " at " + appointimes[i] + " on " + datetimes[z] + ". See you then!");
-                            Console.ReadLine();
-                            return;
-                        }
-                    }
-                    Console.WriteLine("Sorry, that time is not available.");
-                    Console.ReadLine();
-                    return;
-                }
-            }
-            Console.WriteLine("Sorry, that date is not available.");
-            Console.ReadLine();
-            return;
-        }
-
-
-
-        public void apptskinexfolservicewcitywtime(String time, String place, String exfoli, String[] datetimes)
-        {
-            Console.WriteLine("Ok. What is the date you want your " + exfoli + " exfoliation appointment? ");
-            String date = (Console.ReadLine());
-            for (int z = datetimes.Length - 1; z >= 0; z--)
-            {
-                if (date.Contains(datetimes[z]))
-                {
-                    Console.WriteLine("Thank you. You have a " + exfoli + " exfoliation in " + place + " at " + time + " on " + datetimes[z] + ". See you then!");
-                    Console.ReadLine();
-                    return;
-                }
-            }
-            Console.WriteLine("Sorry, that date is not available.");
-            Console.ReadLine();
-            return;
-        }
-
-
-
-        public void apptskinfacial(String[] appointimes, String[] locations, String[] datetimes)
-        {
-            Console.WriteLine("Ok. What is the date you want your facial appointment? ");
-            String date = (Console.ReadLine());
-            for (int z = datetimes.Length - 1; z >= 0; z--)
-            {
-                if (date.Contains(datetimes[z]))
-                {
-                    Console.WriteLine("Ok. What time would you want your facial appointment? ");
-                    String time = (Console.ReadLine());
-                    for (int i = 0; i < appointimes.Length; i++)
-                    {
-                        if (time.Contains(appointimes[i]))
-                        {
-                            Console.WriteLine("Ok. Where do you want to hold your facial appointment?");
-                            String place = (Console.ReadLine().ToLower());
-                            for (int j = 0; j < locations.Length; j++)
-                            {
-                                if (place.Contains(locations[j]))
-                                {
-                                    Console.WriteLine("Thank you. You have a Facial appointment in " + locations[j] + " at " + appointimes[i] + " on " + datetimes[z] + ". See you then!");
-                                    Console.ReadLine();
-                                    return;
-                                }
-                            }
-                            Console.WriteLine("Sorry, I do not offer appointments at " + place + ".");
-                            Console.ReadLine();
-                            return;
-                        }
-                    }
-                    Console.WriteLine("Sorry, that time is not available.");
-                    Console.ReadLine();
-                    return;
-                }
-            }
-            Console.WriteLine("Sorry, that date is not available.");
-            Console.ReadLine();
-            return;
-        }
-
-
-
-        public void apptskinfacialwtime(String time, String[] locations, String[] datetimes)
-        {
-            Console.WriteLine("Ok. What is the date you want your facial appointment? ");
-            String date = (Console.ReadLine());
-            for (int z = datetimes.Length - 1; z >= 0; z--)
-            {
-                if (date.Contains(datetimes[z]))
-                {
-                    Console.WriteLine("Ok. Where do you want to hold your facial appointment?");
-                    String place = (Console.ReadLine().ToLower());
-                    for (int j = 0; j < locations.Length; j++)
-                    {
-                        if (place.Contains(locations[j]))
-                        {
-                            Console.WriteLine("Thank you. You have a Facial appointment in " + locations[j] + " at " + time + " on " + datetimes[z] + ". See you then!");
-                            Console.ReadLine();
-                            return;
-                        }
-                    }
-                    Console.WriteLine("Sorry, I do not offer appointments at " + place + ".");
-                    Console.ReadLine();
-                    return;
-                }
-            }
-            Console.WriteLine("Sorry, that date is not available.");
-            Console.ReadLine();
-            return;
-        }
-
-
-
-        public void apptskinfacialwcity(String[] appointimes, String place, String[] datetimes)
-        {
-            Console.WriteLine("Ok. What is the date you want your facial appointment? ");
-            String date = (Console.ReadLine());
-            for (int z = datetimes.Length - 1; z >= 0; z--)
-            {
-                if (date.Contains(datetimes[z]))
-                {
-                    Console.WriteLine("Ok. What time would you want your facial appointment? ");
-                    String time = (Console.ReadLine());
-                    for (int i = 0; i < appointimes.Length; i++)
-                    {
-                        if (time.Contains(appointimes[i]))
-                        {
-                            Console.WriteLine("Thank you. You have a Facial appointment in " + place + " at " + appointimes[i] + " on " + datetimes[z] + ". See you then!");
-                            Console.ReadLine();
-                            return;
-                        }
-                    }
-                    Console.WriteLine("Sorry, that time is not available.");
-                    Console.ReadLine();
-                    return;
-                }
-            }
-            Console.WriteLine("Sorry, that date is not available.");
-            Console.ReadLine();
-            return;
-        }
-
-
-
-        public void apptskinfacialwcitywtime(String time, String place, String[] datetimes)
-        {
-            Console.WriteLine("Ok. What is the date you want your facial appointment? ");
-            String date = (Console.ReadLine());
-            for (int z = datetimes.Length - 1; z >= 0; z--)
-            {
-                if (date.Contains(datetimes[z]))
-                {
-                    Console.WriteLine("Thank you. You have a Facial appointment in " + place + " at " + time + " on " + datetimes[z] + ". See you then!");
-                    Console.ReadLine();
-                    return;
-                }
-            }
-            Console.WriteLine("Sorry, that date is not available.");
-            Console.ReadLine();
-            return;
-        }
-
-
-
-        public void apptbackfacial(String[] appointimes, String[] locations, String[] datetimes)
-        {
-            Console.WriteLine("Ok. What is the date you want your back facial appointment? ");
-            String date = (Console.ReadLine());
-            for (int z = datetimes.Length - 1; z >= 0; z--)
-            {
-                if (date.Contains(datetimes[z]))
-                {
-                    Console.WriteLine("Ok. What time would you want your back facial appointment? ");
-                    String time = (Console.ReadLine());
-                    for (int i = 0; i < appointimes.Length; i++)
-                    {
-                        if (time.Contains(appointimes[i]))
-                        {
-                            Console.WriteLine("Ok. Where do you want to hold your facial appointment?");
-                            String place = (Console.ReadLine().ToLower());
-                            for (int j = 0; j < locations.Length; j++)
-                            {
-                                if (place.Contains(locations[j]))
-                                {
-                                    Console.WriteLine("Thank you. You have a Back Facial appointment in " + locations[j] + " at " + appointimes[i] + " on " + datetimes[z] + ". See you then!");
-                                    Console.ReadLine();
-                                    return;
-                                }
-                            }
-                            Console.WriteLine("Sorry, I do not offer appointments at " + place + ".");
-                            Console.ReadLine();
-                            return;
-                        }
-                    }
-                    Console.WriteLine("Sorry, that time is not available.");
-                    Console.ReadLine();
-                    return;
-                }
-            }
-            Console.WriteLine("Sorry, that date is not available.");
-            Console.ReadLine();
-            return;
-        }
-
-
-
-        public void apptbackfacialwtime(String time, String[] locations, String[] datetimes)
-        {
-            Console.WriteLine("Ok. What is the date you want your back facial appointment? ");
-            String date = (Console.ReadLine());
-            for (int z = datetimes.Length - 1; z >= 0; z--)
-            {
-                if (date.Contains(datetimes[z]))
-                {
-                    Console.WriteLine("Ok. Where do you want to hold your facial appointment?");
-                    String place = (Console.ReadLine().ToLower());
-                    for (int j = 0; j < locations.Length; j++)
-                    {
-                        if (place.Contains(locations[j]))
-                        {
-                            Console.WriteLine("Thank you. You have a Back Facial appointment in " + locations[j] + " at " + time + " on " + datetimes[z] + ". See you then!");
-                            Console.ReadLine();
-                            return;
-                        }
-                    }
-                    Console.WriteLine("Sorry, I do not offer appointments at " + place + ".");
-                    Console.ReadLine();
-                    return;
-                }
-            }
-            Console.WriteLine("Sorry, that date is not available.");
-            Console.ReadLine();
-            return;
-        }
-
-
-
-        public void apptbackfacialwcity(String[] appointimes, String place, String[] datetimes)
-        {
-            Console.WriteLine("Ok. What is the date you want your back facial appointment? ");
-            String date = (Console.ReadLine());
-            for (int z = datetimes.Length - 1; z >= 0; z--)
-            {
-                if (date.Contains(datetimes[z]))
-                {
-                    Console.WriteLine("Ok. What time would you want your back facial appointment? ");
-                    String time = (Console.ReadLine());
-                    for (int i = 0; i < appointimes.Length; i++)
-                    {
-                        if (time.Contains(appointimes[i]))
-                        {
-                            Console.WriteLine("Thank you. You have a Back Facial appointment in " + place + " at " + appointimes[i] + " on " + datetimes[z] + ". See you then!");
-                            Console.ReadLine();
-                            return;
-                        }
-                    }
-                    Console.WriteLine("Sorry, that time is not available.");
-                    Console.ReadLine();
-                    return;
-                }
-            }
-            Console.WriteLine("Sorry, that date is not available.");
-            Console.ReadLine();
-            return;
-        }
-
-
-
-        public void apptbackfacialwcitywtime(String time, String place, String[] datetimes)
-        {
-            Console.WriteLine("Ok. What is the date you want your back facial appointment? ");
-            String date = (Console.ReadLine());
-            for (int z = datetimes.Length - 1; z >= 0; z--)
-            {
-                if (date.Contains(datetimes[z]))
-                {
-                    Console.WriteLine("Thank you. You have a Back Facial appointment in " + place + " at " + time + " on " + datetimes[z] + ". See you then!");
-                    Console.ReadLine();
-                    return;
-                }
-            }
-            Console.WriteLine("Sorry, that date is not available.");
-            Console.ReadLine();
-            return;
-        }
-
-
-
-        public void apptskinfacialmicroderm(String[] appointimes, String[] locations, String[] datetimes)
-        {
-            Console.WriteLine("Ok. What is the date you want your microdermabrasion facial appointment? ");
-            String date = (Console.ReadLine());
-            for (int z = datetimes.Length - 1; z >= 0; z--)
-            {
-                if (date.Contains(datetimes[z]))
-                {
-                    Console.WriteLine("Ok. What time would you want your microdermabrasion facial appointment? ");
-                    String time = (Console.ReadLine());
-                    for (int i = 0; i < appointimes.Length; i++)
-                    {
-                        if (time.Contains(appointimes[i]))
-                        {
-                            Console.WriteLine("Ok. Where do you want to hold your microdermabrasion facial appointment?");
-                            String place = (Console.ReadLine().ToLower());
-                            for (int j = 0; j < locations.Length; j++)
-                            {
-                                if (place.Contains(locations[j]))
-                                {
-                                    Console.WriteLine("Thank you. You have a Microdermabrasion Facial appointment in " + locations[j] + " at " + appointimes[i] + " on " + datetimes[z] + ". See you then!");
-                                    Console.ReadLine();
-                                    return;
-                                }
-                            }
-                            Console.WriteLine("Sorry, I do not offer appointments at " + place + ".");
-                            Console.ReadLine();
-                            return;
-                        }
-                    }
-                    Console.WriteLine("Sorry, that time is not available.");
-                    Console.ReadLine();
-                    return;
-                }
-            }
-            Console.WriteLine("Sorry, that date is not available.");
-            Console.ReadLine();
-            return;
-        }
-
-
-
-        public void apptskinfacialmicrodermwtime(String time, String[] locations, String[] datetimes)
-        {
-            Console.WriteLine("Ok. What is the date you want your microdermabrasion facial appointment? ");
-            String date = (Console.ReadLine());
-            for (int z = datetimes.Length - 1; z >= 0; z--)
-            {
-                if (date.Contains(datetimes[z]))
-                {
-                    Console.WriteLine("Ok. Where do you want to hold your microdermabrasion facial appointment?");
-                    String place = (Console.ReadLine().ToLower());
-                    for (int j = 0; j < locations.Length; j++)
-                    {
-                        if (place.Contains(locations[j]))
-                        {
-                            Console.WriteLine("Thank you. You have a Microdermabrasion Facial appointment in " + locations[j] + " at " + time + " on " + datetimes[z] + ". See you then!");
-                            Console.ReadLine();
-                            return;
-                        }
-                    }
-                    Console.WriteLine("Sorry, I do not offer appointments at " + place + ".");
-                    Console.ReadLine();
-                    return;
-                }
-            }
-            Console.WriteLine("Sorry, that date is not available.");
-            Console.ReadLine();
-            return;
-        }
-
-
-
-        public void apptskinfacialmicrodermwcity(String[] appointimes, String place, String[] datetimes)
-        {
-            Console.WriteLine("Ok. What is the date you want your microdermabrasion facial appointment? ");
-            String date = (Console.ReadLine());
-            for (int z = datetimes.Length - 1; z >= 0; z--)
-            {
-                if (date.Contains(datetimes[z]))
-                {
-                    Console.WriteLine("Ok. What time would you want your microdermabrasion facial appointment? ");
-                    String time = (Console.ReadLine());
-                    for (int i = 0; i < appointimes.Length; i++)
-                    {
-                        if (time.Contains(appointimes[i]))
-                        {
-                            Console.WriteLine("Thank you. You have a Microdermabrasion Facial appointment in " + place + " at " + appointimes[i] + " on " + datetimes[z] + ". See you then!");
-                            Console.ReadLine();
-                            return;
-                        }
-                    }
-                    Console.WriteLine("Sorry, that time is not available.");
-                    Console.ReadLine();
-                    return;
-                }
-            }
-            Console.WriteLine("Sorry, that date is not available.");
-            Console.ReadLine();
-            return;
-        }
-
-
-
-        public void apptskinfacialmicrodermwcitywtime(String time, String place, String[] datetimes)
-        {
-            Console.WriteLine("Ok. What is the date you want your microdermabrasion facial appointment? ");
-            String date = (Console.ReadLine());
-            for (int z = datetimes.Length - 1; z >= 0; z--)
-            {
-                if (date.Contains(datetimes[z]))
-                {
-                    Console.WriteLine("Thank you. You have a Microdermabrasion Facial appointment in " + place + " at " + time + " on " + datetimes[z] + ". See you then!");
-                    Console.ReadLine();
-                    return;
-                }
-            }
-            Console.WriteLine("Sorry, that date is not available.");
-            Console.ReadLine();
-            return;
-        }
-
-
-
-        public void apptskinfacialextract(String[] appointimes, String[] locations, String[] datetimes)
-        {
-            Console.WriteLine("Ok. What is the date you want your facial with extractions appointment? ");
-            String date = (Console.ReadLine());
-            for (int z = datetimes.Length - 1; z >= 0; z--)
-            {
-                if (date.Contains(datetimes[z]))
-                {
-                    Console.WriteLine("Ok. What time would you want your facial with extractions appointment? ");
-                    String time = (Console.ReadLine());
-                    for (int i = 0; i < appointimes.Length; i++)
-                    {
-                        if (time.Contains(appointimes[i]))
-                        {
-                            Console.WriteLine("Ok. Where do you want to hold your facial with extractions appointment?");
-                            String place = (Console.ReadLine().ToLower());
-                            for (int j = 0; j < locations.Length; j++)
-                            {
-                                if (place.Contains(locations[j]))
-                                {
-                                    Console.WriteLine("Thank you. You have a Facial with Extractions appointment in " + locations[j] + " at " + appointimes[i] + " on " + datetimes[z] + ". See you then!");
-                                    Console.ReadLine();
-                                    return;
-                                }
-                            }
-                            Console.WriteLine("Sorry, I do not offer appointments at " + place + ".");
-                            Console.ReadLine();
-                            return;
-                        }
-                    }
-                    Console.WriteLine("Sorry, that time is not available.");
-                    Console.ReadLine();
-                    return;
-                }
-            }
-            Console.WriteLine("Sorry, that date is not available.");
-            Console.ReadLine();
-            return;
-        }
-
-
-
-        public void apptskinfacialextractwtime(String time, String[] locations, String[] datetimes)
-        {
-            Console.WriteLine("Ok. What is the date you want your facial with extractions appointment? ");
-            String date = (Console.ReadLine());
-            for (int z = datetimes.Length - 1; z >= 0; z--)
-            {
-                if (date.Contains(datetimes[z]))
-                {
-                    Console.WriteLine("Ok. Where do you want to hold your facial with extractions appointment?");
-                    String place = (Console.ReadLine().ToLower());
-                    for (int j = 0; j < locations.Length; j++)
-                    {
-                        if (place.Contains(locations[j]))
-                        {
-                            Console.WriteLine("Thank you. You have a Facial with Extractions appointment in " + locations[j] + " at " + time + " on " + datetimes[z] + ". See you then!");
-                            Console.ReadLine();
-                            return;
-                        }
-                    }
-                    Console.WriteLine("Sorry, I do not offer appointments at " + place + ".");
-                    Console.ReadLine();
-                    return;
-                }
-            }
-            Console.WriteLine("Sorry, that date is not available.");
-            Console.ReadLine();
-            return;
-        }
-
-
-
-        public void apptskinfacialextractwcity(String[] appointimes, String place, String[] datetimes)
-        {
-            Console.WriteLine("Ok. What is the date you want your facial with extractions appointment? ");
-            String date = (Console.ReadLine());
-            for (int z = datetimes.Length - 1; z >= 0; z--)
-            {
-                if (date.Contains(datetimes[z]))
-                {
-                    Console.WriteLine("Ok. What time would you want your facial with extractions appointment? ");
-                    String time = (Console.ReadLine());
-                    for (int i = 0; i < appointimes.Length; i++)
-                    {
-                        if (time.Contains(appointimes[i]))
-                        {
-                            Console.WriteLine("Thank you. You have a Facial with Extractions appointment in " + place + " at " + appointimes[i] + " on " + datetimes[z] + ". See you then!");
-                            Console.ReadLine();
-                            return;
-                        }
-                    }
-                    Console.WriteLine("Sorry, that time is not available.");
-                    Console.ReadLine();
-                    return;
-                }
-            }
-            Console.WriteLine("Sorry, that date is not available.");
-            Console.ReadLine();
-            return;
-        }
-
-
-
-        public void apptskinfacialextractwcitywtime(String time, String place, String[] datetimes)
-        {
-            Console.WriteLine("Ok. What is the date you want your facial with extractions appointment? ");
-            String date = (Console.ReadLine());
-            for (int z = datetimes.Length - 1; z >= 0; z--)
-            {
-                if (date.Contains(datetimes[z]))
-                {
-                    Console.WriteLine("Thank you. You have a Facial with Extractions appointment in " + place + " at " + time + " on " + datetimes[z] + ". See you then!");
-                    Console.ReadLine();
-                    return;
-                }
-            }
-            Console.WriteLine("Sorry, that date is not available.");
-            Console.ReadLine();
-            return;
         }
 
 

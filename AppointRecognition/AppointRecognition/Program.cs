@@ -105,6 +105,11 @@ namespace AppointRecognition
                                 app.apptextensionwcitywtimewdate(a[i], b[j], o[l]);
                                 return;
                             }
+                            if (answer.Contains("cut") && answer.Contains(a[i]) && answer.Contains(b[j]) && answer.Contains(o[l]))
+                            {
+                                app.apptcutwcitywtimewdate(a[i], b[j], o[l]);
+                                return;
+                            }
                             if ((answer.Contains("analysis") || (answer.Contains("instruction"))) && answer.Contains(a[i]) && answer.Contains(b[j]) && answer.Contains(o[l]))
                             {
                                 app.apptmakeupanalysiswcitywtimewdate(a[i], b[j], o[l]);
@@ -130,9 +135,53 @@ namespace AppointRecognition
                                 app.apptreplacewcitywtimewdate(a[i], b[j], e, o[l]);
                                 return;
                             }
-                            if (answer.Contains("cut") && answer.Contains(a[i]) && answer.Contains(b[j]) && answer.Contains(o[l]))
+                            for (int k = 0; k < g.Length; k++)
                             {
-                                app.apptcutwcitywtimewdate(a[i], b[j], o[l]);
+                                for (int y = 0; y < m.Length; y++)
+                                {
+                                    if (answer.Contains(g[k]) && answer.Contains(m[y]) && answer.Contains(a[i]) && answer.Contains(b[j]) && answer.Contains(o[l]))
+                                    {
+                                        app.apptnailchoosewcitywtimewdate(a[i], b[j], g[k], m[y], o[l]);
+                                        Console.ReadLine();
+                                        return;
+                                    }
+                                }
+                            }
+                            for (int k = 0; k < g.Length; k++)
+                            {
+                                if (answer.Contains(g[k]) && answer.Contains(a[i]) && answer.Contains(b[j]) && answer.Contains(o[l]))
+                                {
+                                    app.apptnailchoosemaniwcitywtimewdate(a[i], b[j], g[k], o[l]);
+                                    Console.ReadLine();
+                                    return;
+                                }
+                            }
+                            if (answer.Contains("nail") && answer.Contains(a[i]) && answer.Contains(b[j]) && answer.Contains(o[l]))
+                            {
+                                app.apptnailwcitywtimewdate(a[i], b[j], o[l]);
+                                return;
+                            }
+                            for (int k = 0; k < f.Length; k++)
+                            {
+                                if (answer.Contains(f[k]) && answer.Contains(a[i]) && answer.Contains(b[j]) && answer.Contains(o[l]))
+                                {
+                                    app.apptmassageservicewcitywtimewdate(a[i], b[j], f[k], c, o[l]);
+                                    return;
+                                }
+                            }
+                            if (answer.Contains("massage") && answer.Contains(a[i]) && answer.Contains(b[j]) && answer.Contains(o[l]))
+                            {
+                                app.apptmassagewcitywtimewdate(a[i], b[j], c, o[l]);
+                                return;
+                            }
+                            if (answer.Contains("exfol") && answer.Contains(a[i]) && answer.Contains(b[j]) && answer.Contains(o[l]))
+                            {
+                                app.apptskinexfolwcitywtimewdate(a[i], b[j], d, o[l]);
+                                return;
+                            }
+                            if (answer.Contains("skin") && answer.Contains(a[i]) && answer.Contains(b[j]) && answer.Contains(o[l]))
+                            {
+                                app.apptskinwcitywtimewdate(a[i], b[j], d, o[l]);
                                 return;
                             }
                             if ((answer.Contains("appoint") || answer.Contains("schedule") || answer.Contains("book")) && answer.Contains(a[i]) && answer.Contains(b[j]) && answer.Contains(o[l]))
@@ -199,6 +248,11 @@ namespace AppointRecognition
                             app.apptextensionwcitywdate(a, b[i], o[j]);
                             return;
                         }
+                        if (answer.Contains("cut") && answer.Contains(b[i]) && answer.Contains(o[j]))
+                        {
+                            app.apptcutwcitywdate(a, b[i], o[j]);
+                            return;
+                        }
                         if ((answer.Contains("analysis") || (answer.Contains("instruction"))) && answer.Contains(b[i]) && answer.Contains(o[j]))
                         {
                             app.apptmakeupanalysiswcitywdate(a, b[i], o[j]);
@@ -224,9 +278,53 @@ namespace AppointRecognition
                             app.apptreplacewcitywdate(a, b[i], e, o[j]);
                             return;
                         }
-                        if (answer.Contains("cut") && answer.Contains(b[i]) && answer.Contains(o[j]))
+                        for (int k = 0; k < g.Length; k++)
                         {
-                            app.apptcutwcitywdate(a, b[i], o[j]);
+                            for (int l = 0; l < m.Length; l++)
+                            {
+                                if (answer.Contains(g[k]) && answer.Contains(m[l]) && answer.Contains(b[i]) && answer.Contains(o[j]))
+                                {
+                                    app.apptnailchoosewcitywdate(a, b[i], g[k], m[l], o[j]);
+                                    Console.ReadLine();
+                                    return;
+                                }
+                            }
+                        }
+                        for (int k = 0; k < g.Length; k++)
+                        {
+                            if (answer.Contains(g[k]) && answer.Contains(b[i]) && answer.Contains(o[j]))
+                            {
+                                app.apptnailchoosemaniwcitywdate(a, b[i], g[k], o[j]);
+                                Console.ReadLine();
+                                return;
+                            }
+                        }
+                        if (answer.Contains("nail") && answer.Contains(b[i]) && answer.Contains(o[j]))
+                        {
+                            app.apptnailwcitywdate(a, b[i], o[j]);
+                            return;
+                        }
+                        for (int k = 0; k < f.Length; k++)
+                        {
+                            if (answer.Contains(f[k]) && answer.Contains(b[i]) && answer.Contains(o[j]))
+                            {
+                                app.apptmassageservicewcitywdate(a, b[i], f[k], c, o[j]);
+                                return;
+                            }
+                        }
+                        if (answer.Contains("massage") && answer.Contains(b[i]) && answer.Contains(o[j]))
+                        {
+                            app.apptmassagewcitywdate(a, b[i], c, o[j]);
+                            return;
+                        }
+                        if (answer.Contains("exfol") && answer.Contains(b[i]) && answer.Contains(o[j]))
+                        {
+                            app.apptskinexfolwcitywdate(a, b[i], d, o[j]);
+                            return;
+                        }
+                        if (answer.Contains("skin") && answer.Contains(b[i]) && answer.Contains(o[j]))
+                        {
+                            app.apptskinwcitywdate(a, b[i], d, o[j]);
                             return;
                         }
                         if ((answer.Contains("appoint") || answer.Contains("schedule") || answer.Contains("book")) && answer.Contains(b[i]) && answer.Contains(o[j]))
@@ -293,6 +391,11 @@ namespace AppointRecognition
                             app.apptextensionwtimewdate(a[i], b, o[j]);
                             return;
                         }
+                        if (answer.Contains("cut") && answer.Contains(a[i]) && answer.Contains(o[j]))
+                        {
+                            app.apptcutwtimewdate(a[i], b, o[j]);
+                            return;
+                        }
                         if (answer.Contains("application") && answer.Contains(a[i]) && answer.Contains(o[j]))
                         {
                             app.apptmakeupapplicationwtimewdate(a[i], b, o[j]);
@@ -318,14 +421,53 @@ namespace AppointRecognition
                             app.apptreplacewtimewdate(a[i], b, e, o[j]);
                             return;
                         }
+                        for (int k = 0; k < g.Length; k++)
+                        {
+                            for (int l = 0; l < m.Length; l++)
+                            {
+                                if (answer.Contains(g[k]) && answer.Contains(m[l]) && answer.Contains(a[i]) && answer.Contains(o[j]))
+                                {
+                                    app.apptnailchoosewtimewdate(a[i], b, g[k], m[l], o[j]);
+                                    Console.ReadLine();
+                                    return;
+                                }
+                            }
+                        }
+                        for (int k = 0; k < g.Length; k++)
+                        {
+                            if (answer.Contains(g[k]) && answer.Contains(a[i]) && answer.Contains(o[j]))
+                            {
+                                app.apptnailchoosemaniwtimewdate(a[i], b, g[k], o[j]);
+                                Console.ReadLine();
+                                return;
+                            }
+                        }
                         if (answer.Contains("nail") && answer.Contains(a[i]) && answer.Contains(o[j]))
                         {
                             app.apptnailwtimewdate(a[i], b, o[j]);
                             return;
                         }
-                        if (answer.Contains("cut") && answer.Contains(a[i]) && answer.Contains(o[j]))
+                        for (int k = 0; k < f.Length; k++)
                         {
-                            app.apptcutwtimewdate(a[i], b, o[j]);
+                            if (answer.Contains(f[k]) && answer.Contains(a[i]) && answer.Contains(o[j]))
+                            {
+                                app.apptmassageservicewtimewdate(a[i], b, f[k], c, o[j]);
+                                return;
+                            }
+                        }
+                        if (answer.Contains("massage") && answer.Contains(a[i]) && answer.Contains(o[j]))
+                        {
+                            app.apptmassagewtimewdate(a[i], b, c, o[j]);
+                            return;
+                        }
+                        if (answer.Contains("exfol") && answer.Contains(a[i]) && answer.Contains(o[j]))
+                        {
+                            app.apptskinexfolwtimewdate(a[i], b, d, o[j]);
+                            return;
+                        }
+                        if (answer.Contains("skin") && answer.Contains(a[i]) && answer.Contains(o[j]))
+                        {
+                            app.apptskinwtimewdate(a[i], b, d, o[j]);
                             return;
                         }
                         if ((answer.Contains("appoint") || answer.Contains("schedule") || answer.Contains("book")) && answer.Contains(a[i]) && answer.Contains(o[j]))
@@ -466,37 +608,9 @@ namespace AppointRecognition
                             app.apptmassagewcitywtime(a[i], b[j], c, o);
                             return;
                         }
-                        for (int k = 0; k < d.Length; k++)
-                        {
-                            if (answer.Contains(d[k]) && answer.Contains(a[i]) && answer.Contains(b[j]))
-                            {
-                                app.apptskinexfolservicewcitywtime(a[i], b[j], d[k], o);
-                                return;
-                            }
-                        }
                         if (answer.Contains("exfol") && answer.Contains(a[i]) && answer.Contains(b[j]))
                         {
                             app.apptskinexfolwcitywtime(a[i], b[j], d, o);
-                            return;
-                        }
-                        if (answer.Contains("back facial") && answer.Contains(a[i]) && answer.Contains(b[j]))
-                        {
-                            app.apptbackfacialwcitywtime(a[i], b[j], o);
-                            return;
-                        }
-                        if (answer.Contains("microderm") && answer.Contains(a[i]) && answer.Contains(b[j]))
-                        {
-                            app.apptskinfacialmicrodermwcitywtime(a[i], b[j], o);
-                            return;
-                        }
-                        if (answer.Contains("facial") && (answer.Contains("extract")) && answer.Contains(a[i]) && answer.Contains(b[i]))
-                        {
-                            app.apptskinfacialextractwcitywtime(a[i], b[j], o);
-                            return;
-                        }
-                        if (answer.Contains("facial") && answer.Contains(a[i]) && answer.Contains(b[j]))
-                        {
-                            app.apptskinfacialwcitywtime(a[i], b[j], o);
                             return;
                         }
                         if (answer.Contains("skin") && answer.Contains(a[i]) && answer.Contains(b[j]))
@@ -644,37 +758,9 @@ namespace AppointRecognition
                         app.apptmassagewtime(a[i], b, c, o);
                         return;
                     }
-                    for (int k = 0; k < d.Length; k++)
-                    {
-                        if (answer.Contains(d[k]) && answer.Contains(a[i]))
-                        {
-                            app.apptskinexfolservicewtime(a[i], b, d[k], o);
-                            return;
-                        }
-                    }
                     if (answer.Contains("exfol") && answer.Contains(a[i]))
                     {
                         app.apptskinexfolwtime(a[i], b, d, o);
-                        return;
-                    }
-                    if (answer.Contains("back facial") && answer.Contains(a[i]))
-                    {
-                        app.apptbackfacialwtime(a[i], b, o);
-                        return;
-                    }
-                    if (answer.Contains("microderm") && answer.Contains(a[i]))
-                    {
-                        app.apptskinfacialmicrodermwtime(a[i], b, o);
-                        return;
-                    }
-                    if (answer.Contains("facial") && (answer.Contains("extract")) && answer.Contains(a[i]))
-                    {
-                        app.apptskinfacialextractwtime(a[i], b, o);
-                        return;
-                    }
-                    if (answer.Contains("facial") && answer.Contains(a[i]))
-                    {
-                        app.apptskinfacialwtime(a[i], b, o);
                         return;
                     }
                     if (answer.Contains("skin") && answer.Contains(a[i]))
@@ -825,37 +911,9 @@ namespace AppointRecognition
                         app.apptmassagewcity(a, b[i], c, o);
                         return;
                     }
-                    for (int k = 0; k < d.Length; k++)
-                    {
-                        if (answer.Contains(d[k]) && answer.Contains(b[i]))
-                        {
-                            app.apptskinexfolservicewcity(a, b[i], d[k], o);
-                            return;
-                        }
-                    }
                     if (answer.Contains("exfol") && answer.Contains(b[i]))
                     {
                         app.apptskinexfolwcity(a, b[i], d, o);
-                        return;
-                    }
-                    if (answer.Contains("back facial") && answer.Contains(b[i]))
-                    {
-                        app.apptbackfacialwcity(a, b[i], o);
-                        return;
-                    }
-                    if (answer.Contains("microderm") && answer.Contains(b[i]))
-                    {
-                        app.apptskinfacialmicrodermwcity(a, b[i], o);
-                        return;
-                    }
-                    if (answer.Contains("facial") && (answer.Contains("extract")) && answer.Contains(b[i]))
-                    {
-                        app.apptskinfacialextractwcity(a, b[i], o);
-                        return;
-                    }
-                    if (answer.Contains("facial") && answer.Contains(b[i]))
-                    {
-                        app.apptskinfacialwcity(a, b[i], o);
                         return;
                     }
                     if (answer.Contains("skin") && answer.Contains(b[i]))
@@ -928,6 +986,11 @@ namespace AppointRecognition
                         app.apptextensionwdate(a, b, o[i]);
                         return;
                     }
+                    if (answer.Contains("cut") && answer.Contains(o[i]))
+                    {
+                        app.apptcutwdate(a, b, o[i]);
+                        return;
+                    }
                     if ((answer.Contains("analysis") || (answer.Contains("instruction"))) && answer.Contains(o[i]))
                     {
                         app.apptmakeupanalysiswdate(a, b, o[i]);
@@ -953,14 +1016,53 @@ namespace AppointRecognition
                         app.apptreplacewdate(a, b, e, o[i]);
                         return;
                     }
+                    for (int k = 0; k < g.Length; k++)
+                    {
+                        for (int l = 0; l < m.Length; l++)
+                        {
+                            if (answer.Contains(g[k]) && answer.Contains(m[l]) && answer.Contains(o[i]))
+                            {
+                                app.apptnailchoosewdate(a, b, g[k], m[l], o[i]);
+                                Console.ReadLine();
+                                return;
+                            }
+                        }
+                    }
+                    for (int k = 0; k < g.Length; k++)
+                    {
+                        if (answer.Contains(g[k]) && answer.Contains(o[i]))
+                        {
+                            app.apptnailchoosemaniwdate(a, b, g[k], o[i]);
+                            Console.ReadLine();
+                            return;
+                        }
+                    }
                     if (answer.Contains("nail") && answer.Contains(o[i]))
                     {
                         app.apptnailwdate(a, b, o[i]);
                         return;
                     }
-                    if (answer.Contains("cut") && answer.Contains(o[i]))
+                    for (int k = 0; k < f.Length; k++)
                     {
-                        app.apptcutwdate(a, b, o[i]);
+                        if (answer.Contains(f[k]) && answer.Contains(o[i]))
+                        {
+                            app.apptmassageservicewdate(a, b, f[k], c, o[i]);
+                            return;
+                        }
+                    }
+                    if (answer.Contains("massage") && answer.Contains(o[i]))
+                    {
+                        app.apptmassagewdate(a, b, c, o[i]);
+                        return;
+                    }
+                    if (answer.Contains("exfol") && answer.Contains(o[i]))
+                    {
+                        app.apptskinexfolwdate(a, b, d, o[i]);
+                        return;
+                    }
+                    if (answer.Contains("skin") && answer.Contains(o[i]))
+                    {
+                        app.apptskinwdate(a, b, d, o[i]);
                         return;
                     }
                     if ((answer.Contains("appoint") || answer.Contains("schedule") || answer.Contains("book")) && answer.Contains(o[i]))
@@ -1091,37 +1193,9 @@ namespace AppointRecognition
                     app.apptmassage(a, b, c, o);
                     return;
                 }
-                for (int k = 0; k < d.Length; k++)
-                {
-                    if (answer.Contains(d[k]))
-                    {
-                        app.apptskinexfolservice(a, b, d[k], o);
-                        return;
-                    }
-                }
                 if (answer.Contains("exfol"))
                 {
                     app.apptskinexfol(a, b, d, o);
-                    return;
-                }
-                if (answer.Contains("back facial"))
-                {
-                    app.apptbackfacial(a, b, o);
-                    return;
-                }
-                if (answer.Contains("microderm"))
-                {
-                    app.apptskinfacialmicroderm(a, b, o);
-                    return;
-                }
-                if (answer.Contains("facial") && (answer.Contains("extract")))
-                {
-                    app.apptskinfacialextract(a, b, o);
-                    return;
-                }
-                if (answer.Contains("facial"))
-                {
-                    app.apptskinfacial(a, b, o);
                     return;
                 }
                 if (answer.Contains("skin"))
