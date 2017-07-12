@@ -22,9 +22,10 @@ namespace AppointRecognition
             String[] m = { "hands and feet", "feet and hands", "hands", "feet" };
             String[] n = { "women's blow-dry", "women's styling with flat-curling iron", "women's haircut and blow-dry", "women's haircut with flat-curling iron", "women's haircut with thermal press", "women's haircut", "child's haircut and style", "keratin treatment relaxer", "brazilian blowout relaxer", "conditioning treatment", "special occasions", "up-dos", "consultation", "implementation",
                          "touchup, cut and thermal press", "touchup, cut and flat/curling iron", "touchup, cut and blow-dry", "touchup and thermal press", "touchup and flat/curling iron", "touchup and blow-dry", "touchup and cut", "touchup", 
+                         "touch-up, cut and thermal press", "touch-up, cut and flat/curling iron", "touch-up, cut and blow-dry", "touch-up and thermal press", "touch-up and flat/curling iron", "touch-up and blow-dry", "touch-up and cut", "touch-up", 
                          "color correction", "color, partial highlight, cut and thermal press", "color, partial highlight, cut and flat/curling iron", "color, partial highlight, cut and blow-dry", "color, partial highlight and cut", "color and partial highlight", "color, full highlight, cut and thermal press", "color, full highlight, cut and flat/curling iron", "color, full highlight, cut and blow-dry", "color, full highlight and thermal press", "color, full highlight and flat/curling iron", "color, full highlight and blow-dry", "color, full highlight and cut", "color and full highlight", "color, cut and thermal press", "color, cut and flat/curling iron", "color, cut and blow-dry", "color and thermal press", "color and thermal press", "color and flat/curling iron", "color and blow-dry", "color and haircut", "color",
-                         "partial highlight, touch-up, cut and thermal press", "partial highlight, touch-up, cut and flat/curling iron", "partial highlight, touch-up, cut and blow-dry", "partial highlight, touch-up and thermal press", "partial highlight, touch-up and flat/curling iron", "partial highlight, touch-up and blow-dry", "partial highlight, touch-up and cut", "partial highlight and touch-up", "partial highlight, cut and thermal press", "partial highlight, cut and flat/curling iron", "partial highlight, cut and blow-dry", "partial highlight and thermal press", "partial highlight and flat/curling iron", "partial highlight and blow-dry", "partial highlight and cut", "partial highlight", 
-                         "highlight, touch-up, cut and thermal press", "highlight, touch-up, cut and flat/curling iron", "highlight, touch-up, cut and blow-dry", "highlight, touch-up and thermal press", "highlight, touch-up and flat/curling iron", "highlight, touch-up and blow-dry", "highlight, touch-up and cut", "highlight and touch-up", "highlight, cut and thermal press", "highlight, cut and flat/curling iron", "highlight, cut and blow-dry", "highlight and thermal press", "highlight and flat/curling iron", "highlight and blow-dry", "highlight and cut", "highlight", 
+                         "partial highlight, touch-up, cut and thermal press", "partial highlight, touch-up, cut and flat/curling iron", "partial highlight, touch-up, cut and blow-dry", "partial highlight, touch-up and thermal press", "partial highlight, touch-up and flat/curling iron", "partial highlight, touch-up and blow-dry", "partial highlight, touch-up and cut", "partial highlight and touch-up", "partial highlight, touchup, cut and thermal press", "partial highlight, touchup, cut and flat/curling iron", "partial highlight, touchup, cut and blow-dry", "partial highlight, touchup and thermal press", "partial highlight, touchup and flat/curling iron", "partial highlight, touchup and blow-dry", "partial highlight, touchup and cut", "partial highlight and touchup","partial highlight, cut and thermal press", "partial highlight, cut and flat/curling iron", "partial highlight, cut and blow-dry", "partial highlight and thermal press", "partial highlight and flat/curling iron", "partial highlight and blow-dry", "partial highlight and cut", "partial highlight", 
+                         "highlight, touch-up, cut and thermal press", "highlight, touch-up, cut and flat/curling iron", "highlight, touch-up, cut and blow-dry", "highlight, touch-up and thermal press", "highlight, touch-up and flat/curling iron", "highlight, touch-up and blow-dry", "highlight, touch-up and cut", "highlight and touch-up", "highlight, touchup, cut and thermal press", "highlight, touchup, cut and flat/curling iron", "highlight, touchup, cut and blow-dry", "highlight, touchup and thermal press", "highlight, touchup and flat/curling iron", "highlight, touchup and blow-dry", "highlight, touchup and cut", "highlight and touchup","highlight, cut and thermal press", "highlight, cut and flat/curling iron", "highlight, cut and blow-dry", "highlight and thermal press", "highlight and flat/curling iron", "highlight and blow-dry", "highlight and cut", "highlight", 
                          "consultation", "hair system", "system service and color", "system service", "system coloring", "system styling", "system repair", "cut-in personal system",
                          "french manicure and pedicure", "french manicure", "french pedicure", "spa manicure and pedicure", "spa manicure", "spa pedicure", "manicure and pedicure", "manicure", "pedicure", "polish change-hands and feet", "polish change-hands", "polish change-feet", "full set acrylic-hands and feet", "full set acrylic-hands", "full set acrylic-feet", "acrylic fill-hands and feet", "acrylic fill-hands", "acrylic fill-feet", "pink and white full set-hands and feet", "pink and white full set-hands", "pink and white full set-feet", "nail replacement", "gel nails full set-hands and feet", "gel nails full set-hands", "gel nails full set-feet", "silk nails full set-hands and feet", "silk nails full set-hands", "silk nails full set-feet", "french fill", "french full set",
                          "swedish massage-15", "swedish massage-30", "swedish massage-45", "swedish massage-60", "swedish massage-75", "swedish massage-90", "swedish massage-120", "reflexology massage-15", "reflexology massage-30", "reflexology massage-45", "reflexology massage-60", "reflexology massage-75", "reflexology massage-90", "reflexology massage-120", "shiatsu massage-15", "shiatsu massage-30", "shiatsu massage-45", "shiatsu massage-60", "shiatsu massage-75", "shiatsu massage-90", "shiatsu massage-120", "therapeutic massage-15", "therapeutic massage-30", "therapeutic massage-45", "therapeutic massage-60", "therapeutic massage-75", "therapeutic massage-90", "therapeutic massage-120", "sport massage-15", "sport massage-30", "sport massage-45", "sport massage-60", "sport massage-75", "sport massage-90", "sport massage-120", "medical massage-15", "medical massage-30", "medical massage-45", "medical massage-60", "medical massage-75", "medical massage-90", "medical massage-120", "hot stone massage-15", "hot stone massage-30", "hot stone massage-45", "hot stone massage-60", "hot stone massage-75", "hot stone massage-90", "hot stone massage-120", "ashiatsu oriental bar massage-30", "ashiatsu oriental bar massage-45", "ashiatsu oriental bar massage-60", "ashiatsu oriental bar massage-75", "ashiatsu oriental bar massage-90", "ashiatsu oriental bar massage-120",
@@ -184,6 +185,11 @@ namespace AppointRecognition
                                 app.apptskinwcitywtimewdate(a[i], b[j], d, o[l]);
                                 return;
                             }
+                            if (answer.Contains("tan") && answer.Contains(a[i]) && answer.Contains(b[j]) && answer.Contains(o[l]))
+                            {
+                                app.appttanwcitywtimewdate(a[i], b[j], o[l]);
+                                return;
+                            }
                             if ((answer.Contains("appoint") || answer.Contains("schedule") || answer.Contains("book")) && answer.Contains(a[i]) && answer.Contains(b[j]) && answer.Contains(o[l]))
                             {
                                 app.apptwcitywtimewdate(a[i], b[j], c, d, e, o[l]);
@@ -327,6 +333,11 @@ namespace AppointRecognition
                             app.apptskinwcitywdate(a, b[i], d, o[j]);
                             return;
                         }
+                        if (answer.Contains("tan") && answer.Contains(b[i]) && answer.Contains(o[j]))
+                        {
+                            app.appttanwcitywdate(a, b[i], o[j]);
+                            return;
+                        }
                         if ((answer.Contains("appoint") || answer.Contains("schedule") || answer.Contains("book")) && answer.Contains(b[i]) && answer.Contains(o[j]))
                         {
                             app.apptwcitywdate(a, b[i], c, d, e, o[j]);
@@ -468,6 +479,11 @@ namespace AppointRecognition
                         if (answer.Contains("skin") && answer.Contains(a[i]) && answer.Contains(o[j]))
                         {
                             app.apptskinwtimewdate(a[i], b, d, o[j]);
+                            return;
+                        }
+                        if (answer.Contains("tan") && answer.Contains(a[i]) && answer.Contains(o[j]))
+                        {
+                            app.appttanwtimewdate(a[i], b, o[j]);
                             return;
                         }
                         if ((answer.Contains("appoint") || answer.Contains("schedule") || answer.Contains("book")) && answer.Contains(a[i]) && answer.Contains(o[j]))
@@ -1065,6 +1081,11 @@ namespace AppointRecognition
                         app.apptskinwdate(a, b, d, o[i]);
                         return;
                     }
+                    if (answer.Contains("tan") && answer.Contains(o[i]))
+                    {
+                        app.appttanwdate(a, b, o[i]);
+                        return;
+                    }
                     if ((answer.Contains("appoint") || answer.Contains("schedule") || answer.Contains("book")) && answer.Contains(o[i]))
                     {
                         app.apptwdate(a, b, c, d, e, o[i]);
@@ -1222,15 +1243,1193 @@ namespace AppointRecognition
                     Console.Write("Sorry, I cannot do that.");
                     Console.WriteLine(" What else can I do for you?");
                     String answer2 = (Console.ReadLine().ToLower());
-                    if (answer2.Contains("appoint") || answer2.Contains("schedule") || (answer2.Contains("book")))
+                // Time, City, and Date
+                for (int i = 0; i < a.Length; i++)
+                {
+                    for (int j = 0; j < b.Length; j++)
                     {
-                        app.appt(a, b, c, d, e, o);
+                        for (int l = o.Length - 1; l >= 0; l--)
+                        {
+                            for (int k = 0; k < n.Length; k++)
+                            {
+                                if (answer2.Contains(n[k]) && answer2.Contains(a[i]) && answer2.Contains(b[j]) && answer2.Contains(o[l]))
+                                {
+                                    app.servicewcitywtimewdate(a[i], b[j], n[k], o[l]);
+                                    return;
+                                }
+                            }
+                            if (answer2.Contains("women") && answer2.Contains(a[i]) && answer2.Contains(b[j]) && answer2.Contains(o[l]))
+                            {
+                                app.apptwomenwcitywtimewdate(a[i], b[j], o[l]);
+                                return;
+                            }
+                            if (answer2.Contains("child") && answer2.Contains(a[i]) && answer2.Contains(b[j]) && answer2.Contains(o[l]))
+                            {
+                                app.apptcutchildwcitywtimewdate(a[i], b[j], o[l]);
+                                return;
+                            }
+                            if (answer2.Contains("keratin") && answer2.Contains(a[i]) && answer2.Contains(b[j]) && answer2.Contains(o[l]))
+                            {
+                                app.apptcutrelaxerkeratinwcitywtimewdate(a[i], b[j], o[l]);
+                                return;
+                            }
+                            if (answer2.Contains("brazil") && answer2.Contains(a[i]) && answer2.Contains(b[j]) && answer2.Contains(o[l]))
+                            {
+                                app.apptcutrelaxerbrazilwcitywtimewdate(a[i], b[j], o[l]);
+                                return;
+                            }
+                            if (answer2.Contains("relaxer") && answer2.Contains(a[i]) && answer2.Contains(b[j]) && answer2.Contains(o[l]))
+                            {
+                                app.apptcutrelaxerwcitywtimewdate(a[i], b[j], o[l]);
+                                return;
+                            }
+                            if (answer2.Contains("condition") && answer2.Contains(a[i]) && answer2.Contains(b[j]) && answer2.Contains(o[l]))
+                            {
+                                app.apptcutconditioningwcitywtimewdate(a[i], b[j], o[l]);
+                                return;
+                            }
+                            if ((answer2.Contains("special") || (answer2.Contains("up-do"))) && answer2.Contains(a[i]) && answer2.Contains(b[j]) && answer2.Contains(b[j]))
+                            {
+                                app.apptspecialwcitywtimewdate(a[i], b[j], o[l]);
+                                return;
+                            }
+                            if ((answer2.Contains("extension") || (answer2.Contains("weaving"))) && answer2.Contains(a[i]) && answer2.Contains(b[j]) && answer2.Contains(o[l]))
+                            {
+                                app.apptextensionwcitywtimewdate(a[i], b[j], o[l]);
+                                return;
+                            }
+                            if (answer2.Contains("cut") && answer2.Contains(a[i]) && answer2.Contains(b[j]) && answer2.Contains(o[l]))
+                            {
+                                app.apptcutwcitywtimewdate(a[i], b[j], o[l]);
+                                return;
+                            }
+                            if ((answer2.Contains("analysis") || (answer2.Contains("instruction"))) && answer2.Contains(a[i]) && answer2.Contains(b[j]) && answer2.Contains(o[l]))
+                            {
+                                app.apptmakeupanalysiswcitywtimewdate(a[i], b[j], o[l]);
+                                return;
+                            }
+                            if (answer2.Contains("application") && answer2.Contains(b[j]) && answer2.Contains(a[i]) && answer2.Contains(o[l]))
+                            {
+                                app.apptmakeupapplicationwcitywtimewdate(a[i], b[j], o[l]);
+                                return;
+                            }
+                            if (answer2.Contains("wedding") && answer2.Contains(a[i]) && answer2.Contains(b[j]) && answer2.Contains(o[l]))
+                            {
+                                app.apptmakeupweddingwcitywtimewdate(a[i], b[j], o[l]);
+                                return;
+                            }
+                            if (answer2.Contains("makeup") && answer2.Contains(a[i]) && answer2.Contains(b[j]) && answer2.Contains(o[l]))
+                            {
+                                app.apptmakeupwcitywtimewdate(a[i], b[j], o[l]);
+                                return;
+                            }
+                            if (answer2.Contains("hair replace") && answer2.Contains(a[i]) && answer2.Contains(b[j]) && answer2.Contains(o[l]))
+                            {
+                                app.apptreplacewcitywtimewdate(a[i], b[j], e, o[l]);
+                                return;
+                            }
+                            for (int k = 0; k < g.Length; k++)
+                            {
+                                for (int y = 0; y < m.Length; y++)
+                                {
+                                    if (answer2.Contains(g[k]) && answer2.Contains(m[y]) && answer2.Contains(a[i]) && answer2.Contains(b[j]) && answer2.Contains(o[l]))
+                                    {
+                                        app.apptnailchoosewcitywtimewdate(a[i], b[j], g[k], m[y], o[l]);
+                                        Console.ReadLine();
+                                        return;
+                                    }
+                                }
+                            }
+                            for (int k = 0; k < g.Length; k++)
+                            {
+                                if (answer2.Contains(g[k]) && answer2.Contains(a[i]) && answer2.Contains(b[j]) && answer2.Contains(o[l]))
+                                {
+                                    app.apptnailchoosemaniwcitywtimewdate(a[i], b[j], g[k], o[l]);
+                                    Console.ReadLine();
+                                    return;
+                                }
+                            }
+                            if (answer2.Contains("nail") && answer2.Contains(a[i]) && answer2.Contains(b[j]) && answer2.Contains(o[l]))
+                            {
+                                app.apptnailwcitywtimewdate(a[i], b[j], o[l]);
+                                return;
+                            }
+                            for (int k = 0; k < f.Length; k++)
+                            {
+                                if (answer2.Contains(f[k]) && answer2.Contains(a[i]) && answer2.Contains(b[j]) && answer2.Contains(o[l]))
+                                {
+                                    app.apptmassageservicewcitywtimewdate(a[i], b[j], f[k], c, o[l]);
+                                    return;
+                                }
+                            }
+                            if (answer2.Contains("massage") && answer2.Contains(a[i]) && answer2.Contains(b[j]) && answer2.Contains(o[l]))
+                            {
+                                app.apptmassagewcitywtimewdate(a[i], b[j], c, o[l]);
+                                return;
+                            }
+                            if (answer2.Contains("exfol") && answer2.Contains(a[i]) && answer2.Contains(b[j]) && answer2.Contains(o[l]))
+                            {
+                                app.apptskinexfolwcitywtimewdate(a[i], b[j], d, o[l]);
+                                return;
+                            }
+                            if (answer2.Contains("skin") && answer2.Contains(a[i]) && answer2.Contains(b[j]) && answer2.Contains(o[l]))
+                            {
+                                app.apptskinwcitywtimewdate(a[i], b[j], d, o[l]);
+                                return;
+                            }
+                            if (answer2.Contains("tan") && answer2.Contains(a[i]) && answer2.Contains(b[j]) && answer2.Contains(o[l]))
+                            {
+                                app.appttanwcitywtimewdate(a[i], b[j], o[l]);
+                                return;
+                            }
+                            if ((answer2.Contains("appoint") || answer2.Contains("schedule") || answer2.Contains("book")) && answer2.Contains(a[i]) && answer2.Contains(b[j]) && answer2.Contains(o[l]))
+                            {
+                                app.apptwcitywtimewdate(a[i], b[j], c, d, e, o[l]);
+                                return;
+                            }
+                        }
+                    }
+                }
+
+
+
+                //City and Date
+                for (int i = 0; i < b.Length; i++)
+                {
+                    for (int j = o.Length - 1; j >= 0; j--)
+                    {
+                        for (int k = 0; k < n.Length; k++)
+                        {
+                            if (answer2.Contains(n[k]) && answer2.Contains(b[i]) && answer2.Contains(o[j]))
+                            {
+                                app.servicewcitywdate(a, b[i], n[k], o[j]);
+                                return;
+                            }
+                        }
+                        if (answer2.Contains("women") && answer2.Contains(b[i]) && answer2.Contains(o[j]))
+                        {
+                            app.apptwomenwcitywdate(a, b[i], o[j]);
+                            return;
+                        }
+                        if (answer2.Contains("child") && answer2.Contains(b[i]) && answer2.Contains(o[j]))
+                        {
+                            app.apptcutchildwcitywdate(a, b[i], o[j]);
+                            return;
+                        }
+                        if (answer2.Contains("keratin") && answer2.Contains(b[i]) && answer2.Contains(o[j]))
+                        {
+                            app.apptcutrelaxerkeratinwcitywdate(a, b[i], o[j]);
+                            return;
+                        }
+                        if (answer2.Contains("brazil") && answer2.Contains(b[i]) && answer2.Contains(o[j]))
+                        {
+                            app.apptcutrelaxerbrazilwcitywdate(a, b[i], o[j]);
+                            return;
+                        }
+                        if (answer2.Contains("relaxer") && answer2.Contains(b[i]) && answer2.Contains(o[j]))
+                        {
+                            app.apptcutrelaxerwcitywdate(a, b[i], o[j]);
+                            return;
+                        }
+                        if (answer2.Contains("condition") && answer2.Contains(b[i]) && answer2.Contains(o[j]))
+                        {
+                            app.apptcutconditioningwcitywdate(a, b[i], o[j]);
+                            return;
+                        }
+                        if ((answer2.Contains("special") || (answer2.Contains("up-do"))) && answer2.Contains(b[i]) && answer2.Contains(o[j]))
+                        {
+                            app.apptspecialwcitywdate(a, b[i], o[j]);
+                            return;
+                        }
+                        if ((answer2.Contains("extension") || (answer2.Contains("weaving"))) && answer2.Contains(b[i]) && answer2.Contains(o[j]))
+                        {
+                            app.apptextensionwcitywdate(a, b[i], o[j]);
+                            return;
+                        }
+                        if (answer2.Contains("cut") && answer2.Contains(b[i]) && answer2.Contains(o[j]))
+                        {
+                            app.apptcutwcitywdate(a, b[i], o[j]);
+                            return;
+                        }
+                        if ((answer2.Contains("analysis") || (answer2.Contains("instruction"))) && answer2.Contains(b[i]) && answer2.Contains(o[j]))
+                        {
+                            app.apptmakeupanalysiswcitywdate(a, b[i], o[j]);
+                            return;
+                        }
+                        if (answer2.Contains("application") && answer2.Contains(b[i]) && answer2.Contains(o[j]))
+                        {
+                            app.apptmakeupapplicationwcitywdate(a, b[i], o[j]);
+                            return;
+                        }
+                        if (answer2.Contains("wedding") && answer2.Contains(b[i]) && answer2.Contains(o[j]))
+                        {
+                            app.apptmakeupweddingwcitywdate(a, b[i], o[j]);
+                            return;
+                        }
+                        if (answer2.Contains("makeup") && answer2.Contains(b[i]) && answer2.Contains(o[j]))
+                        {
+                            app.apptmakeupwcitywdate(a, b[i], o[j]);
+                            return;
+                        }
+                        if (answer2.Contains("hair replace") && answer2.Contains(b[i]) && answer2.Contains(o[j]))
+                        {
+                            app.apptreplacewcitywdate(a, b[i], e, o[j]);
+                            return;
+                        }
+                        for (int k = 0; k < g.Length; k++)
+                        {
+                            for (int l = 0; l < m.Length; l++)
+                            {
+                                if (answer2.Contains(g[k]) && answer2.Contains(m[l]) && answer2.Contains(b[i]) && answer2.Contains(o[j]))
+                                {
+                                    app.apptnailchoosewcitywdate(a, b[i], g[k], m[l], o[j]);
+                                    Console.ReadLine();
+                                    return;
+                                }
+                            }
+                        }
+                        for (int k = 0; k < g.Length; k++)
+                        {
+                            if (answer2.Contains(g[k]) && answer2.Contains(b[i]) && answer2.Contains(o[j]))
+                            {
+                                app.apptnailchoosemaniwcitywdate(a, b[i], g[k], o[j]);
+                                Console.ReadLine();
+                                return;
+                            }
+                        }
+                        if (answer2.Contains("nail") && answer2.Contains(b[i]) && answer2.Contains(o[j]))
+                        {
+                            app.apptnailwcitywdate(a, b[i], o[j]);
+                            return;
+                        }
+                        for (int k = 0; k < f.Length; k++)
+                        {
+                            if (answer2.Contains(f[k]) && answer2.Contains(b[i]) && answer2.Contains(o[j]))
+                            {
+                                app.apptmassageservicewcitywdate(a, b[i], f[k], c, o[j]);
+                                return;
+                            }
+                        }
+                        if (answer2.Contains("massage") && answer2.Contains(b[i]) && answer2.Contains(o[j]))
+                        {
+                            app.apptmassagewcitywdate(a, b[i], c, o[j]);
+                            return;
+                        }
+                        if (answer2.Contains("exfol") && answer2.Contains(b[i]) && answer2.Contains(o[j]))
+                        {
+                            app.apptskinexfolwcitywdate(a, b[i], d, o[j]);
+                            return;
+                        }
+                        if (answer2.Contains("skin") && answer2.Contains(b[i]) && answer2.Contains(o[j]))
+                        {
+                            app.apptskinwcitywdate(a, b[i], d, o[j]);
+                            return;
+                        }
+                        if (answer2.Contains("tan") && answer2.Contains(b[i]) && answer2.Contains(o[j]))
+                        {
+                            app.appttanwcitywdate(a, b[i], o[j]);
+                            return;
+                        }
+                        if ((answer2.Contains("appoint") || answer2.Contains("schedule") || answer2.Contains("book")) && answer2.Contains(b[i]) && answer2.Contains(o[j]))
+                        {
+                            app.apptwcitywdate(a, b[i], c, d, e, o[j]);
+                            return;
+                        }
+                    }
+                }
+
+
+
+
+                //Time and Date
+                for (int i = 0; i < a.Length; i++)
+                {
+                    for (int j = o.Length - 1; j >= 0; j--)
+                    {
+                        for (int k = 0; k < n.Length; k++)
+                        {
+                            if (answer2.Contains(n[k]) && answer2.Contains(a[i]) && answer2.Contains(o[j]))
+                            {
+                                app.servicewtimewdate(a[i], b, n[k], o[j]);
+                                return;
+                            }
+                        }
+                        if (answer2.Contains("women") && answer2.Contains(a[i]) && answer2.Contains(o[j]))
+                        {
+                            app.apptwomenwtimewdate(a[i], b, o[j]);
+                            return;
+                        }
+                        if (answer2.Contains("child") && answer2.Contains(a[i]) && answer2.Contains(o[j]))
+                        {
+                            app.apptcutchildwtimewdate(a[i], b, o[j]);
+                            return;
+                        }
+                        if (answer2.Contains("keratin") && answer2.Contains(a[i]) && answer2.Contains(o[j]))
+                        {
+                            app.apptcutrelaxerkeratinwtimewdate(a[i], b, o[j]);
+                            return;
+                        }
+                        if (answer2.Contains("relaxer") && answer2.Contains(a[i]) && answer2.Contains(o[j]))
+                        {
+                            app.apptcutrelaxerwtimewdate(a[i], b, o[j]);
+                            return;
+                        }
+                        if (answer2.Contains("brazil") && answer2.Contains(a[i]) && answer2.Contains(o[j]))
+                        {
+                            app.apptcutrelaxerbrazilwtimewdate(a[i], b, o[j]);
+                            return;
+                        }
+                        if (answer2.Contains("condition") && answer2.Contains(a[i]) && answer2.Contains(o[j]))
+                        {
+                            app.apptcutconditioningwtimewdate(a[i], b, o[j]);
+                            return;
+                        }
+                        if ((answer2.Contains("special") || (answer2.Contains("up-do"))) && answer2.Contains(a[i]) && answer2.Contains(o[j]))
+                        {
+                            app.apptspecialwtimewdate(a[i], b, o[j]);
+                            return;
+                        }
+                        if ((answer2.Contains("extension") || (answer2.Contains("weaving"))) && answer2.Contains(a[i]) && answer2.Contains(o[j]))
+                        {
+                            app.apptextensionwtimewdate(a[i], b, o[j]);
+                            return;
+                        }
+                        if (answer2.Contains("cut") && answer2.Contains(a[i]) && answer2.Contains(o[j]))
+                        {
+                            app.apptcutwtimewdate(a[i], b, o[j]);
+                            return;
+                        }
+                        if (answer2.Contains("application") && answer2.Contains(a[i]) && answer2.Contains(o[j]))
+                        {
+                            app.apptmakeupapplicationwtimewdate(a[i], b, o[j]);
+                            return;
+                        }
+                        if ((answer2.Contains("analysis") || (answer2.Contains("instruction"))) && answer2.Contains(a[i]) && answer2.Contains(o[j]))
+                        {
+                            app.apptmakeupanalysiswtimewdate(a[i], b, o[j]);
+                            return;
+                        }
+                        if (answer2.Contains("wedding") && answer2.Contains(a[i]) && answer2.Contains(o[j]))
+                        {
+                            app.apptmakeupweddingwtimewdate(a[i], b, o[j]);
+                            return;
+                        }
+                        if (answer2.Contains("makeup") && answer2.Contains(a[i]) && answer2.Contains(o[j]))
+                        {
+                            app.apptmakeupwtimewdate(a[i], b, o[j]);
+                            return;
+                        }
+                        if (answer2.Contains("hair replace") && answer2.Contains(a[i]) && answer2.Contains(o[j]))
+                        {
+                            app.apptreplacewtimewdate(a[i], b, e, o[j]);
+                            return;
+                        }
+                        for (int k = 0; k < g.Length; k++)
+                        {
+                            for (int l = 0; l < m.Length; l++)
+                            {
+                                if (answer2.Contains(g[k]) && answer2.Contains(m[l]) && answer2.Contains(a[i]) && answer2.Contains(o[j]))
+                                {
+                                    app.apptnailchoosewtimewdate(a[i], b, g[k], m[l], o[j]);
+                                    Console.ReadLine();
+                                    return;
+                                }
+                            }
+                        }
+                        for (int k = 0; k < g.Length; k++)
+                        {
+                            if (answer2.Contains(g[k]) && answer2.Contains(a[i]) && answer2.Contains(o[j]))
+                            {
+                                app.apptnailchoosemaniwtimewdate(a[i], b, g[k], o[j]);
+                                Console.ReadLine();
+                                return;
+                            }
+                        }
+                        if (answer2.Contains("nail") && answer2.Contains(a[i]) && answer2.Contains(o[j]))
+                        {
+                            app.apptnailwtimewdate(a[i], b, o[j]);
+                            return;
+                        }
+                        for (int k = 0; k < f.Length; k++)
+                        {
+                            if (answer2.Contains(f[k]) && answer2.Contains(a[i]) && answer2.Contains(o[j]))
+                            {
+                                app.apptmassageservicewtimewdate(a[i], b, f[k], c, o[j]);
+                                return;
+                            }
+                        }
+                        if (answer2.Contains("massage") && answer2.Contains(a[i]) && answer2.Contains(o[j]))
+                        {
+                            app.apptmassagewtimewdate(a[i], b, c, o[j]);
+                            return;
+                        }
+                        if (answer2.Contains("exfol") && answer2.Contains(a[i]) && answer2.Contains(o[j]))
+                        {
+                            app.apptskinexfolwtimewdate(a[i], b, d, o[j]);
+                            return;
+                        }
+                        if (answer2.Contains("skin") && answer2.Contains(a[i]) && answer2.Contains(o[j]))
+                        {
+                            app.apptskinwtimewdate(a[i], b, d, o[j]);
+                            return;
+                        }
+                        if (answer2.Contains("tan") && answer2.Contains(a[i]) && answer2.Contains(o[j]))
+                        {
+                            app.appttanwtimewdate(a[i], b, o[j]);
+                            return;
+                        }
+                        if ((answer2.Contains("appoint") || answer2.Contains("schedule") || answer2.Contains("book")) && answer2.Contains(a[i]) && answer2.Contains(o[j]))
+                        {
+                            app.apptcutwtimewdate(a[i], b, o[j]);
+                            return;
+                        }
+                    }
+                }
+
+
+
+
+
+
+
+
+
+                //Time and City       
+                for (int i = 0; i < a.Length; i++)
+                {
+                    for (int j = 0; j < b.Length; j++)
+                    {
+                        for (int k = 0; k < n.Length; k++)
+                        {
+                            if (answer2.Contains(n[k]) && answer2.Contains(a[i]) && answer2.Contains(b[j]))
+                            {
+                                app.servicewcitywtime(a[i], b[j], n[k], o);
+                                return;
+                            }
+                        }
+                        if (answer2.Contains("women") && answer2.Contains(a[i]) && answer2.Contains(b[j]))
+                        {
+                            app.apptwomenwcitywtime(a[i], b[j], o);
+                            return;
+                        }
+                        if (answer2.Contains("child") && answer2.Contains(a[i]) && answer2.Contains(b[j]))
+                        {
+                            app.apptcutchildwcitywtime(a[i], b[j], o);
+                            return;
+                        }
+                        if (answer2.Contains("keratin") && answer2.Contains(a[i]) && answer2.Contains(b[j]))
+                        {
+                            app.apptcutrelaxerkeratinwcitywtime(a[i], b[j], o);
+                            return;
+                        }
+                        if (answer2.Contains("brazil") && answer2.Contains(a[i]) && answer2.Contains(b[j]))
+                        {
+                            app.apptcutrelaxerbrazilwcitywtime(a[i], b[j], o);
+                            return;
+                        }
+                        if (answer2.Contains("relaxer") && answer2.Contains(a[i]) && answer2.Contains(b[j]))
+                        {
+                            app.apptcutrelaxerwcitywtime(a[i], b[j], o);
+                            return;
+                        }
+                        if (answer2.Contains("condition") && answer2.Contains(a[i]) && answer2.Contains(b[j]))
+                        {
+                            app.apptcutconditioningwcitywtime(a[i], b[j], o);
+                            return;
+                        }
+                        if ((answer2.Contains("special") || (answer2.Contains("up-do"))) && answer2.Contains(a[i]) && (answer2.Contains(b[j])))
+                        {
+                            app.apptspecialwcitywtime(a[i], b[j], o);
+                            return;
+                        }
+                        if ((answer2.Contains("extension") || (answer2.Contains("weaving"))) && answer2.Contains(a[i]) && (answer2.Contains(b[j])))
+                        {
+                            app.apptextensionwcitywtime(a[i], b[j], o);
+                            return;
+                        }
+                        if ((answer2.Contains("cut")) && answer2.Contains(a[i]) && answer2.Contains(b[j]))
+                        {
+                            app.apptcutwcitywtime(a[i], b[j], o);
+                            return;
+                        }
+                        if ((answer2.Contains("analysis") || (answer2.Contains("instruction"))) && answer2.Contains(a[i]) && answer2.Contains(b[j]))
+                        {
+                            app.apptmakeupanalysiswcitywtime(a[i], b[j], o);
+                            return;
+                        }
+                        if (answer2.Contains("application") && answer2.Contains(a[i]) && answer2.Contains(b[j]))
+                        {
+                            app.apptmakeupapplicationwcitywtime(a[i], b[j], o);
+                            return;
+                        }
+                        if (answer2.Contains("wedding") && answer2.Contains(a[i]) && answer2.Contains(b[j]))
+                        {
+                            app.apptmakeupweddingwcitywtime(a[i], b[j], o);
+                            return;
+                        }
+                        if (answer2.Contains("makeup") && answer2.Contains(a[i]) && answer2.Contains(b[j]))
+                        {
+                            app.apptmakeupwcitywtime(a[i], b[j], o);
+                            return;
+                        }
+                        if (answer2.Contains("hair replace") && answer2.Contains(a[i]) && answer2.Contains(b[j]))
+                        {
+                            app.apptreplacewcitywtime(a[i], b[j], e, o);
+                            return;
+                        }
+                        for (int k = 0; k < g.Length; k++)
+                        {
+                            for (int l = 0; l < m.Length; l++)
+                            {
+                                if ((answer2.Contains(g[k])) && (answer2.Contains(m[l])) && answer2.Contains(a[i]) && (answer2.Contains(b[j])))
+                                {
+                                    app.apptnailchoosewcitywtime(a[i], b[j], g[k], m[l], o);
+                                    Console.ReadLine();
+                                    return;
+                                }
+                            }
+                        }
+                        for (int k = 0; k < g.Length; k++)
+                        {
+                            if ((answer2.Contains(g[k])) && (answer2.Contains(a[i])) && (answer2.Contains(b[j])))
+                            {
+                                app.apptnailchoosemaniwcitywtime(a[i], b[j], g[k], o);
+                                Console.ReadLine();
+                                return;
+                            }
+                        }
+                        if (answer2.Contains("nail") && answer2.Contains(a[i]) && answer2.Contains(b[j]))
+                        {
+                            app.apptnailwcitywtime(a[i], b[j], o);
+                            return;
+                        }
+                        for (int k = 0; k < f.Length; k++)
+                        {
+                            if (answer2.Contains(f[k]) && answer2.Contains(a[i]) && answer2.Contains(b[j]))
+                            {
+                                app.apptmassageservicewcitywtime(a[i], b[j], f[k], c, o);
+                                return;
+                            }
+                        }
+                        if (answer2.Contains("massage") && answer2.Contains(a[i]) && answer2.Contains(b[j]))
+                        {
+                            app.apptmassagewcitywtime(a[i], b[j], c, o);
+                            return;
+                        }
+                        if (answer2.Contains("exfol") && answer2.Contains(a[i]) && answer2.Contains(b[j]))
+                        {
+                            app.apptskinexfolwcitywtime(a[i], b[j], d, o);
+                            return;
+                        }
+                        if (answer2.Contains("skin") && answer2.Contains(a[i]) && answer2.Contains(b[j]))
+                        {
+                            app.apptskinwcitywtime(a[i], b[j], d, o);
+                            return;
+                        }
+                        if (answer2.Contains("tan") && answer2.Contains(a[i]) && answer2.Contains(b[j]))
+                        {
+                            app.appttanwcitywtime(a[i], b[j], o);
+                            return;
+                        }
+                        if ((answer2.Contains("appoint") || answer2.Contains("schedule") || answer2.Contains("book")) && answer2.Contains(a[i]) && answer2.Contains(b[j]))
+                        {
+                            app.apptwcitywtime(a[i], b[j], c, d, e, o);
+                            return;
+                        }
+                    }
+                }
+
+
+
+
+
+
+
+                //Time
+
+                for (int i = 0; i < a.Length; i++)
+                {
+                    for (int k = 0; k < n.Length; k++)
+                    {
+                        if (answer2.Contains(n[k]) && answer2.Contains(a[i]))
+                        {
+                            app.servicewtime(a[i], b, n[k], o);
+                            return;
+                        }
+                    }
+                    if (answer2.Contains("women") && answer2.Contains(a[i]))
+                    {
+                        app.apptwomenwtime(a[i], b, o);
                         return;
                     }
-                    if ((answer2.Contains("exit")) || (answer2.Contains("end")) || (answer2.Contains("terminate")) || (answer2.Contains("suspend")) || (answer2.Contains("bye")))
+                    if (answer2.Contains("child") && answer2.Contains(a[i]))
                     {
+                        app.apptcutchildwtime(a[i], b, o);
                         return;
                     }
+                    if (answer2.Contains("keratin") && answer2.Contains(a[i]))
+                    {
+                        app.apptcutrelaxerkeratinwtime(a[i], b, o);
+                        return;
+                    }
+                    if (answer2.Contains("brazil") && answer2.Contains(a[i]))
+                    {
+                        app.apptcutrelaxerbrazilwtime(a[i], b, o);
+                        return;
+                    }
+                    if (answer2.Contains("relaxer") && answer2.Contains(a[i]))
+                    {
+                        app.apptcutrelaxerwtime(a[i], b, o);
+                        return;
+                    }
+                    if (answer2.Contains("condition") && answer2.Contains(a[i]))
+                    {
+                        app.apptcutconditioningwtime(a[i], b, o);
+                        return;
+                    }
+                    if ((answer2.Contains("special") || (answer2.Contains("up-do"))) && (answer2.Contains(a[i])))
+                    {
+                        app.apptspecialwtime(a[i], b, o);
+                        return;
+                    }
+                    if ((answer2.Contains("extension") || (answer2.Contains("weaving"))) && (answer2.Contains(a[i])))
+                    {
+                        app.apptextensionwtime(a[i], b, o);
+                        return;
+                    }
+                    if (answer2.Contains("cut") && answer2.Contains(a[i]))
+                    {
+                        app.apptcutwtime(a[i], b, o);
+                        return;
+                    }
+                    if ((answer2.Contains("analysis") || (answer2.Contains("instruction"))) && answer2.Contains(a[i]))
+                    {
+                        app.apptmakeupanalysiswtime(a[i], b, o);
+                        return;
+                    }
+                    if (answer2.Contains("application") && answer2.Contains(a[i]))
+                    {
+                        app.apptmakeupapplicationwtime(a[i], b, o);
+                        return;
+                    }
+                    if (answer2.Contains("wedding") && answer2.Contains(a[i]))
+                    {
+                        app.apptmakeupweddingwtime(a[i], b, o);
+                        return;
+                    }
+                    if (answer2.Contains("makeup") && answer2.Contains(a[i]))
+                    {
+                        app.apptmakeupwtime(a[i], b, o);
+                        return;
+                    }
+                    if (answer2.Contains("hair replace") && answer2.Contains(a[i]))
+                    {
+                        app.apptreplacewtime(a[i], b, e, o);
+                        return;
+                    }
+                    for (int k = 0; k < g.Length; k++)
+                    {
+                        for (int l = 0; l < m.Length; l++)
+                        {
+                            if ((answer2.Contains(g[k])) && (answer2.Contains(m[l])) && (answer2.Contains(a[i])))
+                            {
+                                app.apptnailchoosewtime(a[i], b, g[k], m[l], o);
+                                Console.ReadLine();
+                                return;
+                            }
+                        }
+                    }
+                    for (int k = 0; k < g.Length; k++)
+                    {
+                        if ((answer2.Contains(g[k])) && (answer2.Contains(a[i])))
+                        {
+                            app.apptnailchoosemaniwtime(a[i], b, g[k], o);
+                            Console.ReadLine();
+                            return;
+                        }
+                    }
+                    if (answer2.Contains("nail") && answer2.Contains(a[i]))
+                    {
+                        app.apptnailwtime(a[i], b, o);
+                        return;
+                    }
+                    for (int k = 0; k < f.Length; k++)
+                    {
+                        if (answer2.Contains(f[k]) && answer2.Contains(a[i]))
+                        {
+                            app.apptmassageservicewtime(a[i], b, f[k], c, o);
+                            return;
+                        }
+                    }
+                    if (answer2.Contains("massage") && answer2.Contains(a[i]))
+                    {
+                        app.apptmassagewtime(a[i], b, c, o);
+                        return;
+                    }
+                    if (answer2.Contains("exfol") && answer2.Contains(a[i]))
+                    {
+                        app.apptskinexfolwtime(a[i], b, d, o);
+                        return;
+                    }
+                    if (answer2.Contains("skin") && answer2.Contains(a[i]))
+                    {
+                        app.apptskinwtime(a[i], b, d, o);
+                        return;
+                    }
+                    if (answer2.Contains("tan") && answer2.Contains(a[i]))
+                    {
+                        app.appttanwtime(a[i], b, o);
+                        return;
+                    }
+                    if ((answer2.Contains("appoint") || answer2.Contains("schedule") || answer2.Contains("book")) && answer2.Contains(a[i]))
+                    {
+                        app.apptwtime(a[i], b, c, d, e, o);
+                        return;
+                    }
+                }
+
+
+
+
+
+
+
+
+
+
+
+
+                // City
+                for (int i = 0; i < b.Length; i++)
+                {
+                    for (int k = 0; k < n.Length; k++)
+                    {
+                        if (answer2.Contains(n[k]) && answer2.Contains(b[i]))
+                        {
+                            app.servicewcity(a, b[i], n[k], o);
+                            return;
+                        }
+                    }
+                    if (answer2.Contains("women") && answer2.Contains(b[i]))
+                    {
+                        app.apptwomenwcity(a, b[i], o);
+                        return;
+                    }
+                    if (answer2.Contains("child") && answer2.Contains(b[i]))
+                    {
+                        app.apptcutchildwcity(a, b[i], o);
+                        return;
+                    }
+                    if (answer2.Contains("keratin") && answer2.Contains(b[i]))
+                    {
+                        app.apptcutrelaxerkeratinwcity(a, b[i], o);
+                        return;
+                    }
+                    if (answer2.Contains("brazil") && answer2.Contains(b[i]))
+                    {
+                        app.apptcutrelaxerbrazilwcity(a, b[i], o);
+                        return;
+                    }
+                    if (answer2.Contains("relaxer") && answer2.Contains(b[i]))
+                    {
+                        app.apptcutrelaxerwcity(a, b[i], o);
+                        return;
+                    }
+                    if (answer2.Contains("condition") && answer2.Contains(b[i]))
+                    {
+                        app.apptcutconditioningwcity(a, b[i], o);
+                        return;
+                    }
+                    if ((answer2.Contains("special") || (answer2.Contains("up-do"))) && (answer2.Contains(b[i])))
+                    {
+                        app.apptspecialwcity(a, b[i], o);
+                        return;
+                    }
+                    if ((answer2.Contains("extension") || (answer2.Contains("weaving"))) && (answer2.Contains(b[i])))
+                    {
+                        app.apptextensionwcity(a, b[i], o);
+                        return;
+                    }
+                    if (answer2.Contains("cut") && answer2.Contains(b[i]))
+                    {
+                        app.apptcutwcity(a, b[i], o);
+                        return;
+                    }
+                    if ((answer2.Contains("analysis") || (answer2.Contains("instruction"))) && answer2.Contains(b[i]))
+                    {
+                        app.apptmakeupanalysiswcity(a, b[i], o);
+                        return;
+                    }
+                    if (answer2.Contains("application") && answer2.Contains(b[i]))
+                    {
+                        app.apptmakeupapplicationwcity(a, b[i], o);
+                        return;
+                    }
+                    if (answer2.Contains("wedding") && answer2.Contains(b[i]))
+                    {
+                        app.apptmakeupweddingwcity(a, b[i], o);
+                        return;
+                    }
+                    if (answer2.Contains("makeup") && answer2.Contains(b[i]))
+                    {
+                        app.apptmakeupwcity(a, b[i], o);
+                        return;
+                    }
+                    if (answer2.Contains("hair replace") && answer2.Contains(b[i]))
+                    {
+                        app.apptreplacewcity(a, b[i], e, o);
+                        return;
+                    }
+                    for (int k = 0; k < g.Length; k++)
+                    {
+                        for (int l = 0; l < m.Length; l++)
+                        {
+                            if ((answer2.Contains(g[k])) && (answer2.Contains(m[l])) && (answer2.Contains(b[i])))
+                            {
+                                app.apptnailchoosewcity(a, b[i], g[k], m[l], o);
+                                Console.ReadLine();
+                                return;
+                            }
+                        }
+                    }
+                    for (int k = 0; k < g.Length; k++)
+                    {
+                        if ((answer2.Contains(g[k])) && (answer2.Contains(b[i])))
+                        {
+                            app.apptnailchoosemaniwcity(a, b[i], g[k], o);
+                            Console.ReadLine();
+                            return;
+                        }
+                    }
+                    if (answer2.Contains("nail") && answer2.Contains(b[i]))
+                    {
+                        app.apptnailwcity(a, b[i], o);
+                        return;
+                    }
+                    for (int k = 0; k < f.Length; k++)
+                    {
+                        if (answer2.Contains(f[k]) && answer2.Contains(b[i]))
+                        {
+                            app.apptmassageservicewcity(a, b[i], f[k], c, o);
+                            return;
+                        }
+                    }
+                    if (answer2.Contains("massage") && answer2.Contains(b[i]))
+                    {
+                        app.apptmassagewcity(a, b[i], c, o);
+                        return;
+                    }
+                    if (answer2.Contains("exfol") && answer2.Contains(b[i]))
+                    {
+                        app.apptskinexfolwcity(a, b[i], d, o);
+                        return;
+                    }
+                    if (answer2.Contains("skin") && answer2.Contains(b[i]))
+                    {
+                        app.apptskinwcity(a, b[i], d, o);
+                        return;
+                    }
+                    if (answer2.Contains("tan") && answer2.Contains(b[i]))
+                    {
+                        app.appttanwcity(a, b[i], o);
+                        return;
+                    }
+                    if ((answer2.Contains("appoint") || answer2.Contains("schedule") || answer2.Contains("book")) && answer2.Contains(b[i]))
+                    {
+                        app.apptwcity(a, b[i], c, d, e, o);
+                        return;
+                    }
+                }
+
+
+
+                //Date
+                for (int i = o.Length - 1; i >= 0; i--)
+                {
+                    for (int k = 0; k < n.Length; k++)
+                    {
+                        if (answer2.Contains(n[k]) && answer2.Contains(o[i]))
+                        {
+                            app.servicewdate(a, b, n[k], o[i]);
+                            return;
+                        }
+                    }
+                    if (answer2.Contains("women") && answer2.Contains(o[i]))
+                    {
+                        app.apptwomenwdate(a, b, o[i]);
+                        return;
+                    }
+                    if (answer2.Contains("child") && answer2.Contains(o[i]))
+                    {
+                        app.apptcutchildwdate(a, b, o[i]);
+                        return;
+                    }
+                    if (answer2.Contains("keratin") && answer2.Contains(o[i]))
+                    {
+                        app.apptcutrelaxerkeratinwdate(a, b, o[i]);
+                        return;
+                    }
+                    if (answer2.Contains("brazil") && answer2.Contains(o[i]))
+                    {
+                        app.apptcutrelaxerbrazilwdate(a, b, o[i]);
+                        return;
+                    }
+                    if (answer2.Contains("relaxer") && answer2.Contains(o[i]))
+                    {
+                        app.apptcutrelaxerwdate(a, b, o[i]);
+                        return;
+                    }
+                    if (answer2.Contains("condition") && answer2.Contains(o[i]))
+                    {
+                        app.apptcutconditioningwdate(a, b, o[i]);
+                        return;
+                    }
+                    if ((answer2.Contains("special") || (answer2.Contains("up-do"))) && answer2.Contains(o[i]))
+                    {
+                        app.apptspecialwdate(a, b, o[i]);
+                        return;
+                    }
+                    if ((answer2.Contains("extension") || (answer2.Contains("weaving"))) && answer2.Contains(o[i]))
+                    {
+                        app.apptextensionwdate(a, b, o[i]);
+                        return;
+                    }
+                    if (answer2.Contains("cut") && answer2.Contains(o[i]))
+                    {
+                        app.apptcutwdate(a, b, o[i]);
+                        return;
+                    }
+                    if ((answer2.Contains("analysis") || (answer2.Contains("instruction"))) && answer2.Contains(o[i]))
+                    {
+                        app.apptmakeupanalysiswdate(a, b, o[i]);
+                        return;
+                    }
+                    if (answer2.Contains("application") && answer2.Contains(o[i]))
+                    {
+                        app.apptmakeupapplicationwdate(a, b, o[i]);
+                        return;
+                    }
+                    if (answer2.Contains("wedding") && answer2.Contains(o[i]))
+                    {
+                        app.apptmakeupweddingwdate(a, b, o[i]);
+                        return;
+                    }
+                    if (answer2.Contains("makeup") && answer2.Contains(o[i]))
+                    {
+                        app.apptmakeupwdate(a, b, o[i]);
+                        return;
+                    }
+                    if (answer2.Contains("hair replace") && answer2.Contains(o[i]))
+                    {
+                        app.apptreplacewdate(a, b, e, o[i]);
+                        return;
+                    }
+                    for (int k = 0; k < g.Length; k++)
+                    {
+                        for (int l = 0; l < m.Length; l++)
+                        {
+                            if (answer2.Contains(g[k]) && answer2.Contains(m[l]) && answer2.Contains(o[i]))
+                            {
+                                app.apptnailchoosewdate(a, b, g[k], m[l], o[i]);
+                                Console.ReadLine();
+                                return;
+                            }
+                        }
+                    }
+                    for (int k = 0; k < g.Length; k++)
+                    {
+                        if (answer2.Contains(g[k]) && answer2.Contains(o[i]))
+                        {
+                            app.apptnailchoosemaniwdate(a, b, g[k], o[i]);
+                            Console.ReadLine();
+                            return;
+                        }
+                    }
+                    if (answer2.Contains("nail") && answer2.Contains(o[i]))
+                    {
+                        app.apptnailwdate(a, b, o[i]);
+                        return;
+                    }
+                    for (int k = 0; k < f.Length; k++)
+                    {
+                        if (answer2.Contains(f[k]) && answer2.Contains(o[i]))
+                        {
+                            app.apptmassageservicewdate(a, b, f[k], c, o[i]);
+                            return;
+                        }
+                    }
+                    if (answer2.Contains("massage") && answer2.Contains(o[i]))
+                    {
+                        app.apptmassagewdate(a, b, c, o[i]);
+                        return;
+                    }
+                    if (answer2.Contains("exfol") && answer2.Contains(o[i]))
+                    {
+                        app.apptskinexfolwdate(a, b, d, o[i]);
+                        return;
+                    }
+                    if (answer2.Contains("skin") && answer2.Contains(o[i]))
+                    {
+                        app.apptskinwdate(a, b, d, o[i]);
+                        return;
+                    }
+                    if (answer2.Contains("tan") && answer2.Contains(o[i]))
+                    {
+                        app.appttanwdate(a, b, o[i]);
+                        return;
+                    }
+                    if ((answer2.Contains("appoint") || answer2.Contains("schedule") || answer2.Contains("book")) && answer2.Contains(o[i]))
+                    {
+                        app.apptwdate(a, b, c, d, e, o[i]);
+                        return;
+                    }
+                }
+
+
+
+
+                //No Info
+                for (int k = 0; k < n.Length; k++)
+                {
+                    if (answer2.Contains(n[k]))
+                    {
+                        app.service(a, b, n[k], o);
+                        return;
+                    }
+                }
+                if (answer2.Contains("women"))
+                {
+                    app.apptwomen(a, b, o);
+                    return;
+                }
+                if (answer2.Contains("child"))
+                {
+                    app.apptcutchild(a, b, o);
+                    return;
+                }
+                if (answer2.Contains("keratin"))
+                {
+                    app.apptcutrelaxerkeratin(a, b, o);
+                    return;
+                }
+                if (answer2.Contains("brazil"))
+                {
+                    app.apptcutrelaxerbrazil(a, b, o);
+                    return;
+                }
+                if (answer2.Contains("relaxer"))
+                {
+                    app.apptcutrelaxer(a, b, o);
+                    return;
+                }
+                if (answer2.Contains("condition"))
+                {
+                    app.apptcutconditioning(a, b, o);
+                    return;
+                }
+                if (answer2.Contains("special") || (answer2.Contains("up-do")))
+                {
+                    app.apptspecial(a, b, o);
+                    return;
+                }
+                if (answer2.Contains("extension") || answer2.Contains("weaving"))
+                {
+                    app.apptextension(a, b, o);
+                    return;
+                }
+                if (answer2.Contains("cut"))
+                {
+                    app.apptcut(a, b, o);
+                    return;
+                }
+                if (answer2.Contains("analysis") || (answer2.Contains("instruction")))
+                {
+                    app.apptmakeupanalysis(a, b, o);
+                    return;
+                }
+                if (answer2.Contains("application"))
+                {
+                    app.apptmakeupapplication(a, b, o);
+                    return;
+                }
+                if (answer2.Contains("wedding"))
+                {
+                    app.apptmakeupwedding(a, b, o);
+                    return;
+                }
+                if (answer2.Contains("makeup"))
+                {
+                    app.apptmakeup(a, b, o);
+                    return;
+                }
+                if (answer2.Contains("hair replace"))
+                {
+                    app.apptreplace(a, b, e, o);
+                    return;
+                }
+                for (int k = 0; k < g.Length; k++)
+                {
+                    for (int l = 0; l < m.Length; l++)
+                    {
+                        if ((answer2.Contains(g[k])) && (answer2.Contains(m[l])))
+                        {
+                            app.apptnailchoose(a, b, g[k], m[l], o);
+                            Console.ReadLine();
+                            return;
+                        }
+                    }
+                }
+                for (int k = 0; k < g.Length; k++)
+                {
+                    if ((answer2.Contains(g[k])))
+                    {
+                        app.apptnailchoosemani(a, b, g[k], o);
+                        Console.ReadLine();
+                        return;
+                    }
+                }
+                if (answer2.Contains("nail"))
+                {
+                    app.apptnail(a, b, o);
+                    return;
+                }
+                for (int k = 0; k < f.Length; k++)
+                {
+                    if (answer2.Contains(f[k]))
+                    {
+                        app.apptmassageservice(a, b, f[k], c, o);
+                        return;
+                    }
+                }
+                if (answer2.Contains("massage"))
+                {
+                    app.apptmassage(a, b, c, o);
+                    return;
+                }
+                if (answer2.Contains("exfol"))
+                {
+                    app.apptskinexfol(a, b, d, o);
+                    return;
+                }
+                if (answer2.Contains("skin"))
+                {
+                    app.apptskin(a, b, d, o);
+                    return;
+                }
+                if (answer2.Contains("tan"))
+                {
+                    app.appttan(a, b, o);
+                    return;
+                }
+                if (answer2.Contains("appoint") || answer2.Contains("schedule") || (answer2.Contains("book")))
+                {
+                    app.appt(a, b, c, d, e, o);
+                    return;
+                }
+                if ((answer2.Contains("exit")) || (answer2.Contains("end")) || (answer2.Contains("terminate")) || (answer2.Contains("suspend")) || (answer2.Contains("bye")))
+                {
+                    return;
+                }
                 }
             }
         }
