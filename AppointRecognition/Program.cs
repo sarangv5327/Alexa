@@ -59,7 +59,7 @@ namespace AppointRecognition
             {
                 for (int j = _config.Genders[i].Values.Length - 1; j >= 0; --j)
                 {
-                    _genderMapping[_config.Genders[i].Values[j]] = _config.Genders[i].Name; 
+                    _genderMapping[_config.Genders[i].Values[j]] = _config.Genders[i].Name;
                 }
             }
 
@@ -133,7 +133,7 @@ namespace AppointRecognition
         }
         #endregion
 
-        #region -- Filters -- 
+        #region -- Filters --
         static bool RemoveFilter(string input, string pattern, ref string removed, ref string remainder)
         {
             // input = "Lisa's women haircut"
@@ -278,14 +278,14 @@ namespace AppointRecognition
 
             if (_MorningRegex.IsMatch(input))
             {
-                from = new TimeSpan(7, 0, 0);
+                from = new TimeSpan(9, 0, 0);
                 to = new TimeSpan(12, 0, 0);
                 return _MorningRegex.Replace(input, "");
             }
 
             if (_AfternoonRegex.IsMatch(input))
             {
-                from = new TimeSpan(12, 0, 0);
+                from = new TimeSpan(14, 0, 0);
                 to = new TimeSpan(18, 0, 0);
                 return _AfternoonRegex.Replace(input, "");
             }
@@ -301,7 +301,8 @@ namespace AppointRecognition
         }
 
         #region -- DateFilter Regex --
-        static Regex _TomorrowRegex = new Regex("tomorrow", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+        static Regex _TodayRegex = new Regex("today", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+        static Regex _TomorrowRegex = new Regex("tomorrow|tommorow|tomorow|tommorrow", RegexOptions.Compiled | RegexOptions.IgnoreCase);
         static Regex _RelativeDayRegex = new Regex(@"(next)*\s*(sunday|monday|tuesday|wednesday|thursday|friday|saturday|sun|mon|tue|wed|thu|fri|sat)+", RegexOptions.Compiled | RegexOptions.IgnoreCase);
         static Dictionary<string, DayOfWeek> _DayOfWeekDict = new Dictionary<string, DayOfWeek>()
         {
@@ -326,7 +327,7 @@ namespace AppointRecognition
             { "february", 2 }, { "feb", 2 },
             { "march", 3 }, { "mar", 3 },
             { "april", 4 }, { "apr", 4 },
-            { "may", 5 },
+            { "may", 5 }, 
             { "june", 6 }, { "jun", 6 },
             { "july", 7 }, { "jul", 7 },
             { "august", 8 }, { "aug", 8 },
@@ -393,6 +394,12 @@ namespace AppointRecognition
                 return _NextMonthRegex.Replace(input, "");
             }
 
+            if (_TodayRegex.IsMatch(input))
+            {
+                from = to = today.AddDays(0);
+                return _TodayRegex.Replace(input, "");
+            }
+            
             if (_TomorrowRegex.IsMatch(input))
             {
                 from = to = today.AddDays(1);
@@ -430,7 +437,7 @@ namespace AppointRecognition
             var result = new List<string[]>();
 
             //input = "222 111-333";
-            
+
             var words = input.Split(" ,;\b".ToCharArray(), StringSplitOptions.RemoveEmptyEntries).OrderBy(K => K).ToList();
             // words = ["111-333", "222"]
 
@@ -539,7 +546,7 @@ namespace AppointRecognition
             return null;
         }
 
-        static Regex _ExitRegex = new Regex("^\\s*(exit|(good)*\\s*bye|see you\\s*$|nothing\\s*$|that's\\s*all\\s*$)\\s*", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+        static Regex _ExitRegex = new Regex("^\\s*(exit|(good)*\\s*bye|see you\\s*$|done\\s*$|leave\\s*$|nothing\\s*$|that's\\s*all\\s*$)\\s*", RegexOptions.Compiled | RegexOptions.IgnoreCase);
         static bool ExitFilter(string input)
         {
             return _ExitRegex.IsMatch(input);
@@ -677,7 +684,7 @@ namespace AppointRecognition
                 DateTime? toDate = null;
                 if (request.DateTime.BeginTime == null)
                 {
-                    requestStr = GetAnswerToQuestion("", "What date and time would you like to receive the service?", ">> ");
+                    requestStr = GetAnswerToQuestion("", "What day and time would you like to receive the service?", ">> ");
                     requestStr = requestStr.Trim().ToLower();
                     requestStr = DateFilter(requestStr, ref fromDate, ref toDate);
                     request.DateTime.BeginDate = fromDate.HasValue ? fromDate.Value : DateTime.Today.AddDays(1);
@@ -685,12 +692,12 @@ namespace AppointRecognition
                     TimeSpan? fromTime = null;
                     TimeSpan? toTime = null;
                     requestStr = TimeFilter(requestStr, ref fromTime, ref toTime);
-                    request.DateTime.BeginTime = fromTime.HasValue ? fromTime.Value : new TimeSpan(7, 0, 0);
+                    request.DateTime.BeginTime = fromTime.HasValue ? fromTime.Value : new TimeSpan(14, 0, 0);
                     request.DateTime.EndTime = toTime.HasValue ? toTime.Value : new TimeSpan(22, 0, 0);
                 }
                 else
                 {
-                    requestStr = GetAnswerToQuestion("", "What date would you like to receive the service?", ">> ");
+                    requestStr = GetAnswerToQuestion("", "What day would you like to receive the service?", ">> ");
                     requestStr = requestStr.Trim().ToLower();
                     requestStr = DateFilter(requestStr, ref fromDate, ref toDate);
                     request.DateTime.BeginDate = fromDate.HasValue ? fromDate.Value : DateTime.Today.AddDays(1);
@@ -736,7 +743,7 @@ namespace AppointRecognition
                     foreach (string service in servicesFound.Select(S => S.Title))
                         messages.Add(string.Format("  {0}) {1}", item++, service));
 
-                    ShowMessages("", "Please select a service:");
+                    ShowMessages("", "Please select the number corresponding to the service:");
                     for (int i = 0; i < 3; ++i)
                     {
                         ShowMessages(messages.ToArray());
@@ -745,21 +752,21 @@ namespace AppointRecognition
                         {
                             if (item > 0 && item <= servicesFound.Count)
                             {
-                                serviceSelected = servicesFound[item-1];
+                                serviceSelected = servicesFound[item - 1];
                                 break;
                             }
                         }
 
-                        ShowMessages("", "Invalid choice.Please select a number shown below: ");
+                        ShowMessages("", "Sorry, I did not get that. Please select a number shown below: ");
                     }
 
                     if (serviceSelected == null)
-                        ShowMessages("", "Hmm... We cannot understand your choice.");
+                        ShowMessages("", "Hmm... I cannot understand your choice.");
                 }
                 else
                     serviceSelected = servicesFound[0];
 
-                var results = new List<string>() { "", "The following service is booked:", string.Format("  Service: {0}", serviceSelected.Title) };
+                var results = new List<string>() { "", "Thank you! The following service is booked:", string.Format("  Service: {0}", serviceSelected.Title) };
 
                 if (request.DateTime.BeginDate != null || request.DateTime.BeginTime != null)
                 {
@@ -789,7 +796,6 @@ namespace AppointRecognition
             for (int i = 0; i < messages.Length - 1; ++i)
                 Console.WriteLine(messages[i]);
             Console.Write(messages.Last());
-
             return Console.ReadLine();
         }
 
@@ -807,7 +813,7 @@ namespace AppointRecognition
                     Console.WriteLine(message);
         }
         #endregion
-
+        
         static void Main(string[] args)
         {
             Initialize();
