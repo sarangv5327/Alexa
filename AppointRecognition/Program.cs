@@ -399,7 +399,7 @@ namespace AppointRecognition
                 from = to = today.AddDays(0);
                 return _TodayRegex.Replace(input, "");
             }
-            
+
             if (_TomorrowRegex.IsMatch(input))
             {
                 from = to = today.AddDays(1);
@@ -546,7 +546,7 @@ namespace AppointRecognition
             return null;
         }
 
-        static Regex _ExitRegex = new Regex("^\\s*(exit|(good)*\\s*bye|see you\\s*$|done\\s*$|leave\\s*$|nothing\\s*$|that's\\s*all\\s*$)\\s*", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+        static Regex _ExitRegex = new Regex("^\\s*(exit|(good)*\\s*bye|see you\\s*$|done\\s*$|quit\\s*$|terminate\\s*$|leave\\s*$|nothing\\s*$|that's\\s*all\\s*$)\\s*", RegexOptions.Compiled | RegexOptions.IgnoreCase);
         static bool ExitFilter(string input)
         {
             return _ExitRegex.IsMatch(input);
@@ -813,7 +813,8 @@ namespace AppointRecognition
                     Console.WriteLine(message);
         }
         #endregion
-        
+
+        #region -- Running --
         static void Main(string[] args)
         {
             Initialize();
@@ -827,5 +828,6 @@ namespace AppointRecognition
                 ProcessRequest(ParseRequest(requestStr));
             }
         }
+        #endregion
     }
 }
