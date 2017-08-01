@@ -217,6 +217,10 @@ namespace AppointRecognition
         static Regex _MorningRegex = new Regex("morning", RegexOptions.Compiled | RegexOptions.IgnoreCase);
         static Regex _AfternoonRegex = new Regex("afternoon", RegexOptions.Compiled | RegexOptions.IgnoreCase);
         static Regex _EveningRegex = new Regex("evening", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+        static Regex _NightRegex = new Regex("night", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+        static Regex _NoonRegex = new Regex("noon", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+
         #endregion
 
         static string TimeFilter(string input, ref TimeSpan? from, ref TimeSpan? to)
@@ -297,12 +301,26 @@ namespace AppointRecognition
                 return _EveningRegex.Replace(input, "");
             }
 
+            if (_NightRegex.IsMatch(input))
+            {
+                from = new TimeSpan(21, 0, 0);
+                to = new TimeSpan(24, 0, 0);
+                return _NightRegex.Replace(input, "");
+            }
+
+            if (_NoonRegex.IsMatch(input))
+            {
+                from = new TimeSpan(12, 0, 0);
+                to = new TimeSpan(13, 0, 0);
+                return _NightRegex.Replace(input, "");
+            }
+
             return input;
         }
 
         #region -- DateFilter Regex --
         static Regex _TodayRegex = new Regex("today", RegexOptions.Compiled | RegexOptions.IgnoreCase);
-        static Regex _TomorrowRegex = new Regex("tomorrow|tommorow|tomorow|tommorrow", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+        static Regex _TomorrowRegex = new Regex("tomorrow|tommorow|tomorow|tommorrow|tmrw", RegexOptions.Compiled | RegexOptions.IgnoreCase);
         static Regex _RelativeDayRegex = new Regex(@"(next)*\s*(sunday|monday|tuesday|wednesday|thursday|friday|saturday|sun|mon|tue|wed|thu|fri|sat)+", RegexOptions.Compiled | RegexOptions.IgnoreCase);
         static Dictionary<string, DayOfWeek> _DayOfWeekDict = new Dictionary<string, DayOfWeek>()
         {
@@ -327,7 +345,7 @@ namespace AppointRecognition
             { "february", 2 }, { "feb", 2 },
             { "march", 3 }, { "mar", 3 },
             { "april", 4 }, { "apr", 4 },
-            { "may", 5 }, 
+            { "may", 5 },
             { "june", 6 }, { "jun", 6 },
             { "july", 7 }, { "jul", 7 },
             { "august", 8 }, { "aug", 8 },
@@ -437,7 +455,6 @@ namespace AppointRecognition
             var result = new List<string[]>();
 
             //input = "222 111-333";
-
             var words = input.Split(" ,;\b".ToCharArray(), StringSplitOptions.RemoveEmptyEntries).OrderBy(K => K).ToList();
             // words = ["111-333", "222"]
 
@@ -759,7 +776,7 @@ namespace AppointRecognition
 
                         ShowMessages("", "Sorry, I did not get that. Please select a number shown below: ");
                     }
-
+                    
                     if (serviceSelected == null)
                         ShowMessages("", "Hmm... I cannot understand your choice.");
                 }
@@ -824,7 +841,6 @@ namespace AppointRecognition
                 var requestStr = GetAnswerToQuestion("", "What can I do for you?", ">> ");
                 if (ExitFilter(requestStr))
                     Exit(0, "Goodbye ...");
-
                 ProcessRequest(ParseRequest(requestStr));
             }
         }
